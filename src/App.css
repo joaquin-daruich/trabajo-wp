@@ -1,0 +1,319 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14.2px;
+}
+.hache{
+    flex: 2;
+    height: 22vh;
+    width: 22vw;
+}
+
+.Mensajes {
+    display: flex;
+    width:  100vw;
+    height:     100vh;
+    background-image:url("../public/fondo-wp-blanco.jpg");
+    border: solid rgb(142, 3, 255) 20PX;
+    border-top: solid rgb(133, 3, 255) 20PX; 
+    border-radius:  13%;
+    left: 38vw;
+    top: 2vw;
+    flex-direction: column-reverse;
+    align-items: end;
+    overflow: hidden;
+    gap:    2vh;
+
+}
+
+.Mensajes .uno{
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 20PX;
+    width:          24vw;    
+    height:     10vh;
+    box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px;
+    position: relative;
+    bottom: 42vh;
+    right:  122vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Mensajes .mensajes-viejos{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Mensajes .uno .contenido-uno{
+    left: 6VH;
+    color: #000306;
+    font-weight: 700;;
+    height: 8vh;
+}
+
+.Mensajes .uno .estado-uno{
+    display: none;
+}
+
+.Mensajes .uno .hora-uno{
+    left:           1vh;
+        color: rgb(230, 203, 203);
+    font-weight: 900;
+    font-size:  11px;
+    font-style: italic;
+    top:        4.2vw;
+    position: absolute;
+    
+}
+
+
+
+.Mensajes .dos .estado-dos{
+    display: none;
+}
+
+.Mensajes .dos .hora-dos{
+    left:               28VH;
+    width: 4vw;
+        color: rgb(230, 203, 203);
+    font-weight: 900;
+    font-size:  11px;
+    font-style: italic;
+    top:        0.2.7vw;
+    flex: 1;
+    right:  0.2vw;
+}
+
+.Mensajes .dos .contenido-dos{
+    TOP: 1VH;
+    left:   2.8vh;
+    color: #000306;
+    font-weight: 700;;
+}
+
+.Mensajes .enviar{
+    top: 86VH;
+    left:   70VH;
+    border: none;
+    width:  17vw;
+    height: 8vh;
+    position: absolute;
+}
+
+.Mensajes .enviar .Enviar-Mensaje{
+    border: none;
+    border-radius: 22%;
+    background-color: white ;
+    width:  22vw;
+    height:     12vh;
+    flex: 2;
+    bottom: 8VH;
+    
+}
+
+
+.Mensajes .enviar .clase-2{
+    border: none;
+    border-radius: 22%;
+    background-color: rgb(255, 0, 0) ;
+    width:  22vw;
+    height:     12vh;
+    flex: 2;
+    bottom:     12VH;
+    left:   1vh;
+}
+
+.Mensajes .enviar .clase-2::first-line{
+    position: absolute;
+    left: 6vh;
+    bottom: 5vh;
+    color: blueviolet;
+
+}
+
+.Mensajes .enviar  .Enviar-Mensaje::placeholder{
+    display: flex;
+    color: rgb(233,253,222,);
+    justify-content: center;
+    align-items: center;
+    left: 7vh;
+    border: none;
+}
+
+ .Perfil{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    width:      99vw;
+    height:     8vh;
+    border-bottom: solid 0.2PX rgba(0, 0, 0, 0.082) ;
+    position: relative;
+    bottom: 85.8VH;
+    z-index:   1;
+}
+
+ .Perfil .flecha{
+    width:  3VW;
+    height: 2VW;
+    background-color: white;
+    border: white;
+    position: relative;
+    left:   1.5VH;
+}
+ .Perfil .flecha:active{
+    width:  7VW;
+    background-color: rgb(243, 33, 33);
+    border: white;
+}
+
+
+
+
+
+
+.imagen-emperador{
+    height: 8vh;
+    position: relative;
+    right:  1.5VH;
+    border-radius: 100%;
+}
+
+.imagen-emperador:active{
+    height: 88vh;
+}
+
+.El-Emperador{
+    position: relative;
+    right:  0.5vh;
+    color: black;
+    font-weight: 800;
+    font-size:  2.5vh;
+}
+
+.llamar{
+    position: relative;
+    left:   6vw;
+    border: none;
+    background-color: white;
+}
+
+.grabar{
+    position: relative;
+    left:   4vw;
+    border: none;
+    background-color: white;
+}
+
+.pintar{
+    position: relative;
+    left:   3.5vw;
+    border: none;
+    background-color: white;
+}
+
+
+.imagen-emperador:hover{
+    transition:         1s ease-in-out;
+}
+
+.boton-emperador{
+    background-color: white;
+}
+
+.Mensajes .tres{
+    position: relative;
+    top:    0.6vw;
+    width: 22vw;
+    height: 12vh;   
+}
+
+.Mensajes .tres{
+    background-color: #D8FDD2;
+    border-radius:  15%;
+    width:      12vw;
+    height: 6vh;
+    box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px
+}
+
+.Mensajes .tres .estado-tres {
+    color: blue;
+    left:   16.5vh;
+    top: 1.5vh;
+
+}
+
+.Mensajes .tres .contenido-tres {
+    color: #2d3f30;
+    font-weight: 600;
+    top: 2VH;
+    left: 2.5VH;
+
+}
+
+.Mensajes  .tres .hora-tres {
+    color: #789777b2;
+    font-style: italic;
+    left:  16.5vh;
+    top: 1.5vh;
+    font-size:  1.5VH;
+}
+
+.Mensajes .mensajes-nuevos{
+    display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column-reverse;
+}
+
+.Mensajes .mensajes-nuevos .mensaje-nuevo{
+    background-color: #D8FDD2;
+    border-radius:  15%;
+    width:      12vw;
+    height: 6vh;
+    box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px;
+    bottom: 2.6vh;
+}
+
+.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
+    color: #2d3f30;
+    font-weight: 600;
+    top: 2VH;
+    left: 2.5VH;
+
+}
+
+.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
+    color: #789777b2;
+    font-style: italic;
+    left:  16.5vh;
+    top: 1.5vh;
+    font-size:  1.5VH;
+}
+
+.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
+    color: blue;
+    left:   16.5vh;
+    top: 1.5vh;
+
+}
+
+
+.zora-domain {
+    width: 38VW;
+    height: 34vh;
+    position: absolute;
+    bottom: 45VH;
+    left:   59vh;
+}
+
+
+.lol{
+
+    opacity: 0;
+}
