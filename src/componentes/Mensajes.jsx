@@ -88,7 +88,7 @@ return(
 
     <div  className="Mensajes">
     <div className="Perfil">
-                <Link to={'/'}>
+                <Link to={'/Inicio'}>
                 <button className="flecha" ><i class="bi bi-arrow-left"></i></button>
                 </Link>
                 <Link to={'/info/' + autor}>
