@@ -1,29 +1,30 @@
 import React, { useState } from 'react'
 import './App.css'
 import Mensajes from './componentes/mensajes'
-import { listaDeMensajes } from './ListaDeMensajes'
+import { MensajesLista } from './ListaDeMensajes'
+import { Link, Route, Routes } from 'react-router-dom'
+import {Inicio} from './componentes/Inicio'
+import InformacionAutor from './componentes/InformacionAutor'
 
 
 
 function App() {
 
-// const userData = {
-//     isLogged: true,
-//     isAdmin: true,
-//     lang: 'en',
-// }
-
-
 
 
 return (
 <>
-{/* <Counter limit={3}/> */}
-{/* <NavBar userData ={userData}/> */}
 
-<Mensajes listaDeMensajes = {listaDeMensajes} ></Mensajes>
+<Routes>
+    <Route path='/' element={<Inicio></Inicio>}/>
+    <Route path='/perfiles/:autor' element={<Mensajes></Mensajes>}/>
+    <Route path='/info/:autor' element={<InformacionAutor></InformacionAutor>}/>
+</Routes>
 
-<video className='zora-domain'  src="../public/zora-domain.mp4"  autoPlay controls loop > </video>
+ 
+
+
+
 
 </>
 )}

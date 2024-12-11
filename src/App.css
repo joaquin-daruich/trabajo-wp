@@ -12,6 +12,7 @@
     width: 22vw;
 }
 
+
 .Mensajes {
     display: flex;
     width:  100vw;
@@ -20,25 +21,23 @@
     border: solid rgb(142, 3, 255) 20PX;
     border-top: solid rgb(133, 3, 255) 20PX; 
     border-radius:  13%;
-    left: 38vw;
-    top: 2vw;
+
     flex-direction: column-reverse;
     align-items: end;
     overflow: hidden;
     gap:    2vh;
-
 }
 
 .Mensajes .uno{
     display: flex;
     background-color: #FFFFFF;
     border-radius: 20PX;
-    width:          24vw;    
-    height:     10vh;
+    width:          56vw;    
+    height:     11vh;
     box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px;
     position: relative;
-    bottom: 42vh;
-    right:  122vh;
+    bottom: 46vh;
+    right:  16vh;
     justify-content: center;
     align-items: center;
 }
@@ -46,6 +45,7 @@
 .Mensajes .mensajes-viejos{
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 }
 
 .Mensajes .uno .contenido-uno{
@@ -60,47 +60,25 @@
 }
 
 .Mensajes .uno .hora-uno{
-    left:           1vh;
+    right:           3vh;
         color: rgb(230, 203, 203);
     font-weight: 900;
     font-size:  11px;
     font-style: italic;
-    top:        4.2vw;
-    position: absolute;
+    top:        6vw;
+    position: relative;
     
 }
 
 
 
-.Mensajes .dos .estado-dos{
-    display: none;
-}
-
-.Mensajes .dos .hora-dos{
-    left:               28VH;
-    width: 4vw;
-        color: rgb(230, 203, 203);
-    font-weight: 900;
-    font-size:  11px;
-    font-style: italic;
-    top:        0.2.7vw;
-    flex: 1;
-    right:  0.2vw;
-}
-
-.Mensajes .dos .contenido-dos{
-    TOP: 1VH;
-    left:   2.8vh;
-    color: #000306;
-    font-weight: 700;;
-}
 
 .Mensajes .enviar{
-    top: 86VH;
-    left:   70VH;
+    bottom: 7VH;
+    left:   9VH;
     border: none;
-    width:  17vw;
-    height: 8vh;
+    width:  6vw;
+    height: 16vh;
     position: absolute;
 }
 
@@ -108,10 +86,10 @@
     border: none;
     border-radius: 22%;
     background-color: white ;
-    width:  22vw;
-    height:     12vh;
+    width:  65vw;
+    height:     20vh;
     flex: 2;
-    bottom: 8VH;
+
     
 }
 
@@ -119,12 +97,10 @@
 .Mensajes .enviar .clase-2{
     border: none;
     border-radius: 22%;
-    background-color: rgb(255, 0, 0) ;
-    width:  22vw;
-    height:     12vh;
+    background-color: white ;
+    width:  70vw;
+    height:     20vh;
     flex: 2;
-    bottom:     12VH;
-    left:   1vh;
 }
 
 .Mensajes .enviar .clase-2::first-line{
@@ -140,8 +116,9 @@
     color: rgb(233,253,222,);
     justify-content: center;
     align-items: center;
-    left: 7vh;
+    left: 1vh;
     border: none;
+    position: relative;
 }
 
  .Perfil{    
@@ -150,12 +127,13 @@
     align-items: center;
     justify-content: space-around;
     background-color: white;
-    width:      99vw;
-    height:     8vh;
+    width:      88vw;
+    height:     8.3vh;
     border-bottom: solid 0.2PX rgba(0, 0, 0, 0.082) ;
     position: relative;
-    bottom: 85.8VH;
+    bottom: 84.8VH;
     z-index:   1;
+    right: 1vh;
 }
 
  .Perfil .flecha{
@@ -166,11 +144,6 @@
     position: relative;
     left:   1.5VH;
 }
- .Perfil .flecha:active{
-    width:  7VW;
-    background-color: rgb(243, 33, 33);
-    border: white;
-}
 
 
 
@@ -180,12 +153,14 @@
 .imagen-emperador{
     height: 8vh;
     position: relative;
-    right:  1.5VH;
+    left:  1.5VH;
     border-radius: 100%;
 }
 
-.imagen-emperador:active{
-    height: 88vh;
+.imagen-emperador:hover{
+    height: 33vh;
+    position: relative;
+    top: 11vh;
 }
 
 .El-Emperador{
@@ -218,102 +193,169 @@
 }
 
 
-.imagen-emperador:hover{
-    transition:         1s ease-in-out;
-}
 
-.boton-emperador{
-    background-color: white;
-}
 
-.Mensajes .tres{
-    position: relative;
-    top:    0.6vw;
-    width: 22vw;
-    height: 12vh;   
-}
 
-.Mensajes .tres{
-    background-color: #D8FDD2;
-    border-radius:  15%;
-    width:      12vw;
-    height: 6vh;
-    box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px
-}
-
-.Mensajes .tres .estado-tres {
-    color: blue;
-    left:   16.5vh;
-    top: 1.5vh;
-
-}
-
-.Mensajes .tres .contenido-tres {
-    color: #2d3f30;
-    font-weight: 600;
-    top: 2VH;
-    left: 2.5VH;
-
-}
-
-.Mensajes  .tres .hora-tres {
-    color: #789777b2;
-    font-style: italic;
-    left:  16.5vh;
-    top: 1.5vh;
-    font-size:  1.5VH;
-}
 
 .Mensajes .mensajes-nuevos{
     display: flex;
   justify-content: end;
   align-items: end;
   flex-direction: column-reverse;
+  bottom: 12vh;
+  position: relative;
+  right: 3vh;
+  
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo{
-    background-color: #D8FDD2;
+    background-color: rgb(226,254,198);
     border-radius:  15%;
-    width:      12vw;
-    height: 6vh;
+    width: 40vw;
+    height: 10vh;
     box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px;
-    bottom: 2.6vh;
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
+    position: relative;
     color: #2d3f30;
     font-weight: 600;
-    top: 2VH;
-    left: 2.5VH;
+    top: 4VH;
+    left: 2VH;
+    
 
 }
 
 .Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
+    position: relative;
     color: #789777b2;
     font-style: italic;
-    left:  16.5vh;
-    top: 1.5vh;
+    left:  16vh;
+    top: 3.5vh;
     font-size:  1.5VH;
+    
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
+    position: relative;
     color: blue;
     left:   16.5vh;
-    top: 1.5vh;
+    top: 4.5vh;
 
 }
 
 
-.zora-domain {
-    width: 38VW;
-    height: 34vh;
+.inicio {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-image:url("../public/caballos.avif");
+    border: solid rgb(142, 3, 255) 20PX;
+    border-top: solid rgb(133, 3, 255) 20PX; 
+    border-radius:  13%;
+}
+
+.inicio .quien{
     position: absolute;
-    bottom: 45VH;
-    left:   59vh;
+    width: 60vw;
+    height: 7vh;
+    font-size: 6vh;
+    right: 6vh;
+    color: rgb(38, 0, 255);
+}
+
+.inicio .emper {
+    width: 20vw;
+    height: 50vh;
+    position: relative;
+    right: 2vh;
+    top: 24vh;
+}
+
+.inicio .enamo {
+    width: 22vw;
+
+    position: relative;
+    left: 2vh;
+    top: 24vh;
+    height: 50vh;
 }
 
 
-.lol{
 
-    opacity: 0;
+@media screen and (min-width: 500px) {
+    .Mensajes .uno{
+     right: 32vh;
+    }
+    .Mensajes .uno .hora-uno{
+        top: 3vh;
+    }
+    .Mensajes .enviar{
+        left: 25vh;
+    }
+    .inicio .quien{
+        top: 12vh;
+        left: 62vh;
+    }
+
+    
+.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
+
+    left:  30vh;
+
+    
+}
+
+.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
+    left:   30.5vh;
+
+}
+.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
+
+    left: 9VH;
+    
+}  
+
+@media screen and (min-width: 870px) {
+    .Mensajes .uno{
+     right: 68vh;
+    }
+    .Mensajes .uno .hora-uno{
+        top: 4vh;
+        left: 31vh;
+    }
+    .Mensajes .enviar{
+        left: 35vh;
+    }
+    .inicio .quien{
+        top: 12vh;
+        left: 62vh;
+    }
+
+    
+.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
+
+    left:  67vh;
+
+    
+}
+
+.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
+    left:   67.5vh;
+
+}
+.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
+
+    left: 38VH;
+    
+}
+.Mensajes .enviar  .Enviar-Mensaje::placeholder  {
+    left: 30vh;
+} 
+.Perfil{
+    width: 98vw;
+}
+ }
 }
