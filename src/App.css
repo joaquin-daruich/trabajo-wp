@@ -151,10 +151,13 @@
 
 
 .imagen-emperador{
+    display: flex;
     height: 8vh;
     position: relative;
     left:  1.5VH;
     border-radius: 100%;
+    
+    
 }
 
 .imagen-emperador:hover{
@@ -259,11 +262,12 @@
 
 .inicio .quien{
     position: absolute;
-    width: 60vw;
+    width: 36vw;
     height: 7vh;
     font-size: 6vh;
     right: 6vh;
     color: rgb(38, 0, 255);
+    background-image: url("../public/fondo-wp-blanco.jpg");
 }
 
 .inicio .emper {
@@ -485,7 +489,9 @@
 }
  }
 
-
+.imagen-emperador{
+    top: 2vh;
+}
 }
 
 
@@ -495,5 +501,130 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url("../public/fondo-wp-blanco.jpg");
+}
+
+.iniciar{
+    position: relative;
+    width: 56vw;
+    height: 23vh;
+    bottom: 8vh;
+}
+
+.iniciar::placeholder{
+    position: relative;
+    font-size: 6vh;
+    left: 25vh;
+}
+
+.iniciar::first-line{
+    position: relative;
+    font-size: 6vh;
+    left: 25vh;
+}
+
+.flecha2{
+    position: absolute;
+    background-color: blueviolet;
+    width: 30vw;
+    height: 30vh;
+    bottom: 45vh;
+    right: 78vh;
+}
+
+.tarot{
+    width: 20vw;
+    position: absolute;
+    right: 6vw;
+    top: 20vw;
+}
+
+.elegir{
+    color: blueviolet;
+    width: 22vw;
+    height: 12vh;
+    position: absolute;
+    font-size: 8vh;
+    right:  7vh;
+    top: 22vh;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+}
+
+.ocultar{
+    display: none;
+}
+
+.ver{
+    display: none;
+}
+
+.imagenArcano{
+    position: absolute;
+    bottom: 37vh;
+    left: 64vh;
+
+}
+
+.seleccionar{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    column-gap: 16vw;
+    background-image: url("../public/el-jardin.jpg");
+}
+
+.mensaje4{
+    color: red;
+    position: relative;
+    top: 17vh;
+    right: 45vh;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+}
+
+.contenedor-msj{
+    color: blueviolet;
+    position: relative;
+    bottom: 8vh;
+    right: 32vh;
+    width: 26vw;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+}
+
+.input{
+    position: relative;
+    height: 12vh;
+    width: 22vw;
+    right: 36vh;
+}
+
+.mensaje3{
+    height: 16vh;
+    font-size: 20px;
+}
+
+.apuntar{
+    background-image: url("../../public/mano.png");
+    position: absolute;
+    color: black;
+    font-weight: 500;
+    font-size: 4vh;
+    bottom: 44vh;
+    left: 5vh;
+    height: 44vh;
+    width: 31vw;
+}
+
+
+.informacion-autor{
+    font-size: 4vh;
+}
+
+.imagenArcano2{
+    position: absolute;
+    bottom: 33vh;
+    left: 83vh;
+
 }

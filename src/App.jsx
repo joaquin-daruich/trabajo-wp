@@ -6,6 +6,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import {Inicio} from './componentes/Inicio'
 import InformacionAutor from './componentes/InformacionAutor'
 import {IniciarSesion} from './componentes/IniciarSesion'
+import NuevaCarta from './componentes/NuevaCarta'
 
 
 
@@ -21,6 +22,7 @@ return (
     <Route path='/Inicio' element={<Inicio></Inicio>}/>
     <Route path='/perfiles/:autor' element={<Mensajes></Mensajes>}/>
     <Route path='/info/:autor' element={<InformacionAutor></InformacionAutor>}/>
+    <Route path='/crearNuevaCarta' element={<NuevaCarta></NuevaCarta>}/>
 </Routes>
 
  

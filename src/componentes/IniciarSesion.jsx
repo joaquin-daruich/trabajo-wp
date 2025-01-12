@@ -9,12 +9,14 @@ const SesionIniciada = (e) => {
 
 const requerimentos = (e) => {
 
-    e.target.value.length === 8 && 
+    e.target.value.length >= 8 ?
     setSesionIniciada(
     <Link to={'/Inicio'}>
     <button type='submit'>Enviar</button>
-    </Link>
-)
+    </Link>)
+    :
+    setSesionIniciada('')
+
 }
 const [sesionIniciada , setSesionIniciada] = useState()
   return (
@@ -22,13 +24,14 @@ const [sesionIniciada , setSesionIniciada] = useState()
 
     <form className='iniciarSesion' onSubmit={SesionIniciada}>
             <div>
-                <h1>Porfavor incia sesion para poder comunicarte</h1>
-                <h1>Su nombre de usuario debe tener al menos 8 letras para poder inciar sesion!</h1>
+                <h1 className='mensaje3'>Porfavor incia sesion para poder comunicarte</h1>
+
             <label  htmlFor="nuevos-mensajes" >
             
             <div>
             
-            <input onChange={requerimentos}  type="text" required  placeholder={'Nombre de Usuario'} minLength={8}  />
+            <input className='iniciar' onChange={requerimentos}  type="text" required  placeholder={'Nombre de Usuario'} minLength={8}  />
+            <h1 className='mensaje3'>Su nombre de usuario debe tener al menos 8 letras para poder inciar sesion!</h1>
             {sesionIniciada}
             </div> 
             
