@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from './GlobalContext'
+
 
 const NuevaCarta = () => {
-const [valor , setValor] = useState('')
+const   [numerosBloqueados , setNumerosBloqueados] = useState([])
 
+const [mensajeDeClick , setmensajeDeClick] = useState('Hace click en el Arcano para hablar con él!')
+const [valor , setValor] = useState('')
+const [valor2 , setValor2] = useState('')
+const {ocultarCarta} = useGlobalContext()
 const estado = "bi bi-check2-all"
+
 const mostrarAutorDependiendoElNumero = (valor) =>{
 return(
     valor === 1 ? 'El Mago'
@@ -65,40 +72,34 @@ const nuevoArcanoMayor = {
     hora: valor+':0'+valor,
     estado: estado,
     id:   'uno',
-    imagen:"../../public/"+valor+".jpg",
+    imagen:valor === '' ? "../../public/"+valor2+".jpg" : "../../public/"+valor+".jpg" ,
     ip: 1,
     informacionDeAutor: mostrarInformacionDependiendoElAutor(Number(valor))
 }
 
-const soloPoderUsarNumerosDel1al22 = () => {
-    return(
-        Number(valor) < Number(23) ?
-        ''
-        :
-        setValor('') ,
-        Number(valor) > -1 ?
-        ''
-        :
-        setValor(''),
-        Number(valor) === 4 ?
-        setValor('') 
-        :
-        '',
-        Number(valor) === 6 ?
-        setValor('') 
-        :
-        ''
-    )
-    }
-    soloPoderUsarNumerosDel1al22()
+
+    
     
 const hablarConElNuevoArcano = () => {
     localStorage.setItem(valor , JSON.stringify(nuevoArcanoMayor))
 }
-const capturarValor = (e) => {
+const capturarValor = (e ) => {
  setValor(e.target.value)
+ setValor2('')
 }
-console.log(valor)
+
+const capturarValor2 = (e ) => {
+    setValor2(e.target.value)
+    setValor(''),
+     numerosBloqueados.includes(e.target.value) ?
+setBloquear('Hace click para desbloquearlo!') : 
+setBloquear('Hace click en el Arcano para bloquearlo!')
+   }
+
+
+
+
+
 
 const seleccionarArcano = (e) => {
 e.preventDefault()
@@ -106,16 +107,35 @@ e.preventDefault()
 
 const [mostrar , setMostrar] = useState('')
 const [mostrarMano , setmostrarMano] = useState('')
-const alEscribirSeMuestra = () => {
-    valor === '' ?
+const [mostrar2 , setMostrar2] = useState('')
+const [mostrarMano2 , setmostrarMano2] = useState('')
+const [bloquear, setBloquear] = useState('Hace click en el Arcano para bloquearlo!')
+const alEscribirSeMuestra = (valor) => {
+
+    numerosBloqueados.includes(valor) ?
     mostrar === 'ocultar' ?
     ''
+    :
+    mostrar === 'imagenArcano' ?
+    setMostrar('ocultar')
+    :
+    ''
+    :
+    valor === '' ?
+    mostrar === 'ocultar' ?
+    mensajeDeClick === 'Arcano Bloqueado!!' ?
+    ''
+    :
+    setmensajeDeClick('Arcano Bloqueado!!')
     :
     setMostrar('ocultar') 
     :
     mostrar === 'imagenArcano'
     ?
+    mensajeDeClick === 'Hace click en el Arcano para hablar con él!' ?
     ''
+    :
+    setmensajeDeClick('Hace click en el Arcano para hablar con él!')
     :
     setMostrar('imagenArcano'),
     valor === '' ?
@@ -130,21 +150,132 @@ const alEscribirSeMuestra = () => {
     :
     setmostrarMano('apuntar')
 }
-alEscribirSeMuestra()
+
+
+const soloPoderUsarNumerosDel1al22 = () => {
+    return(
+        Number(valor) < Number(23) ?
+        ''
+        :
+        setValor('') ,
+        Number(valor) > -1 ?
+        ''
+        :
+        Number(valor2) < Number(23) ?
+        ''
+        :
+        setValor2(''),
+                Number(valor2) > Number(-1) ?
+        ''
+        :
+        setValor2(''),
+        numerosBloqueados === null ?
+        '' 
+        :
+        Number(valor2) < Number(23) ?
+        ''
+        :
+        setValor2('')
+    )
+    }
+     soloPoderUsarNumerosDel1al22()
+
+const  [contenedorDeHolas , setcontenedorDeHolas] = useState([])
+
+const buscarNumerosBloqueados = () => {
+     
+    const numerosGuardados = JSON.parse(localStorage.getItem('numerosBloqueados'))
+numerosGuardados === null ?
+''
+:
+contenedorDeHolas.includes('hola') ?
+'':
+setNumerosBloqueados(numerosGuardados)
+
+numerosGuardados !== null &&
+ contenedorDeHolas.push ( 'hola')
+
+
+
+}
+
+
+const alEscribirSeMuestra2 = (valor) => {
+    valor === '' ?
+    mostrar2 === 'ocultar' ?
+    ''
+    :
+    setMostrar2('ocultar') 
+    :
+    mostrar2 === 'imagenArcano'
+    ?
+    ''
+    :
+    setMostrar2('imagenArcano'),
+    valor === '' ?
+    mostrarMano2 === 'ocultar' ?
+    ''
+    :
+    setmostrarMano2('ocultar') 
+    :
+    mostrarMano2 === 'apuntar'
+    ?
+    ''
+    :
+    setmostrarMano2('apuntar')
+    
+}
+
+alEscribirSeMuestra(valor)
+alEscribirSeMuestra2(valor2)
+
+const DesbloquearNumero = (valor2) => {
+    numerosBloqueados.includes(valor2) ?
+setNumerosBloqueados(numerosBloqueados.filter((numero)  => numero !== valor2))
+ :
+numerosBloqueados.push(valor2), 
+setValor2(''),
+
+localStorage.setItem('numerosBloqueados' , JSON.stringify(numerosBloqueados))
+}
+
+
+
+
+
+
+const bloquearCarta = () => {
+    Number(valor2) === 4 ? ocultarCarta(Number(4))
+: Number(valor2) === 6 ? ocultarCarta(Number(6)) : ''
+DesbloquearNumero(valor2)
+}
+buscarNumerosBloqueados()
   return (
     <form className='seleccionar' onSubmit={seleccionarArcano}>
         <div className='contenedor-msj'>
-        <h1 className='mensaje3'>Elegí un numero del 1 al 22</h1>
+        <h1 className='mensaje3'>Escribí un numero del 1 al 22</h1>
         <h2 className='mensaje3'>El numero que eligas va a corresponder a su respectivo arcano mayor</h2>
         <h3 className='mensaje3'>Ejemplo: si elegis el 7, va a ser el carro y ahora vas a poder hablar con el carro!</h3>
         </div>
-        <h4 className='mensaje4'>El 4 y el 6 ya estan!</h4>
-        <input className='input'  onChange={capturarValor} value={valor} type="number" placeholder=     '1 al 22'  />
+        <input className='input'  onChange={capturarValor} value={valor} type="number" placeholder=     'Escribí del 1 al 22 para hablar'  />
         <div className={mostrarMano}>
-        Hace click en el Arcano para hablar con él!
+        {mensajeDeClick}
         </div>
+        <div className='contenedor-msj2'>
+        <h1 className='mensaje2'>Si hay alguna carta que no te gusta escribi su numero  y bloqueala!</h1>
+        <input className='input2'  onChange={capturarValor2} value={valor2} type="number" placeholder=     'Escribí alguna carta que quieras bloquear'  />
+        </div>
+        <div className={mostrarMano2}>
+        {bloquear}
+        </div>
+        <button  onClick={bloquearCarta} className={mostrar2}><img src={Number(valor2) === 4 ? "../../public/LeEmpereur.jpg" : Number(valor2) === 6 ? "../../public/enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></button>
+        {Number(valor) === 4         ?   <Link to={'/perfiles/' +  'El Emperador'}  >
+                        <img className={mostrar} src={"../../public/LeEmpereur.jpg"} alt="" />
+                    </Link> : Number(valor) === 6         ?             <Link to={'/perfiles/' + 'El Enamorado'} >
+                                    <img className={mostrar} src={"../../public/enamorado.jpg"} alt="" />
+                                </Link> :
         <Link onClick={hablarConElNuevoArcano} to={'/perfiles/' + valor}><img className={mostrar} src={nuevoArcanoMayor.imagen}></img></Link>
-        
+    }
     </form>
   )
 }

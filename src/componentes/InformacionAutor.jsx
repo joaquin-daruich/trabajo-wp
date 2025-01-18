@@ -12,7 +12,10 @@ const imagen = autor === 'El Emperador' ?
  autor === 'El Enamorado'?
  ''
  :  JSON.parse((localStorage.getItem(autor)))
-
+const eliminarHistorial = () => {
+  localStorage.removeItem('mensajes De ' + imagen.autor),
+  localStorage.removeItem('contador de ' + imagen.autor)
+}
   return (
 <div className='Mensajes'>
   <div className='Perfil'>
@@ -33,6 +36,7 @@ const imagen = autor === 'El Emperador' ?
     <div>
     <img className='imagenArcano2' src={imagen.imagen} alt="" />
     <h1 className='informacion-autor'>{imagen.informacionDeAutor}</h1>
+            <button onClick={eliminarHistorial} className='eliminarHistorial'>Hace Click aca para eliminar el historial de Mensajes de {imagen.autor}</button>
     </div>}
 
 </div>

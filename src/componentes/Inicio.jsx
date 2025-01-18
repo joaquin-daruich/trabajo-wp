@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { Link , Route, Routes} from 'react-router-dom';
  import { MensajesLista } from '../ListaDeMensajes';
-import Mensajes from './mensajes';
+import { useGlobalContext } from './GlobalContext';
 
 
 
 
 const Inicio = () => {
+const enamorado = MensajesLista.find((imagen ) => imagen.autor === 'El Enamorado')
+const emperador = MensajesLista.find((imagen ) => imagen.autor === 'El Emperador')
+const {mostrarEmperador} = useGlobalContext()
+const {mostrarEnamorado} = useGlobalContext()
+
+
 
   return (
     <>
@@ -15,14 +21,14 @@ const Inicio = () => {
         <button className="flecha" ><i class="bi bi-arrow-left"></i></button>
     </Link>
         <h1 className='quien'>Con quien queres hablar? </h1>
-        <div >
+        <div className={mostrarEmperador} >
             <Link to={'/perfiles/' +  'El Emperador'}  >
-                <img className='emper' src="../../public/LeEmpereur.jpg" alt="" />
+                <img className='emper' src={emperador.imagen} alt="" />
             </Link>
         </div>
-        <div>
+        <div className={mostrarEnamorado}>
             <Link to={'/perfiles/' + 'El Enamorado'} >
-                <img className='enamo' src="../../public/enamorado.jpg" alt="" />
+                <img className='enamo' src={enamorado.imagen} alt="" />
             </Link>
         </div>
 

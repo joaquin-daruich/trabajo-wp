@@ -1,4 +1,5 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css")
+;
 *{
     box-sizing: border-box;
     margin: 0;
@@ -576,13 +577,7 @@
     background-image: url("../public/el-jardin.jpg");
 }
 
-.mensaje4{
-    color: red;
-    position: relative;
-    top: 17vh;
-    right: 45vh;
-    background-image: url("../public/fondo-wp-blanco.jpg");
-}
+
 
 .contenedor-msj{
     color: blueviolet;
@@ -614,7 +609,7 @@
     bottom: 44vh;
     left: 5vh;
     height: 44vh;
-    width: 31vw;
+    width: 34.7vw;
 }
 
 
@@ -627,4 +622,39 @@
     bottom: 33vh;
     left: 83vh;
 
+}
+
+
+.eliminarHistorial{
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.507);
+    position: absolute;
+    bottom: 55vh;
+    width: 23vw;
+    height: 15vh;
+    left: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje2{
+    height: 16vh;
+    font-size: 20px;
+}
+
+.contenedor-msj2{
+    color: blueviolet;
+    position: absolute;
+    bottom: 16vh;
+    right: 115vh;
+    width: 26vw;
+    background-image: url("../public/fondo-wp-blanco.jpg")
+}
+
+
+
+.input2{
+    position: relative;
+    height: 12vh;
+    width: 26vw;
 }

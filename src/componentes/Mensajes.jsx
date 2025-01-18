@@ -50,8 +50,6 @@ const objetoDeClasname = [valorClass]
 
 const [cambiarAlEscribir , setCambiarAlEscribir] = useState('ahora no se puede mandar mensaje')
 
-console.log(imagen)
-
 const pruebasubmit = (e) => {
     e.preventDefault()
     pruebasubmitdos()
@@ -81,7 +79,6 @@ buscarMensajesNuevos(mensajesDe, setContador , 'contador de ' )
         
         
         localStorage.setItem( 'mensajes De ' + imagen.autor ,JSON.stringify(mensajesDe))
-        console.log( mensajesDe  ),
         setValorInput(''),
         setContador(contador + 1 )
         localStorage.setItem('contador de ' + imagen.autor , JSON.stringify(contador))
@@ -90,7 +87,6 @@ buscarMensajesNuevos(mensajesDe, setContador , 'contador de ' )
 
 const prueba = (e) => {
     return(
-    console.log(e.target.value),
     setValorClass('clase-2'),
     setValorInput(e.target.value),
     setCambiarAlEscribir('ahora si se puede enviar') )
@@ -99,6 +95,7 @@ const prueba = (e) => {
 const mensajesNuevos = []
 
 const mapeo =   mensajesDe.map((mensaje , index )  =>{
+    
     return(
    
     mensaje.id ===  'mensaje-nuevo'?
@@ -144,6 +141,7 @@ const mapeo =   mensajesDe.map((mensaje , index )  =>{
 // mapeo.pop(contador)
 return(
     <>
+    
     
     <div  className="Mensajes">
     <div className="Perfil">
