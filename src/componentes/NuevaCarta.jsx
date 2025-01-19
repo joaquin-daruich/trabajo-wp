@@ -207,22 +207,22 @@ const alEscribirSeMuestra2 = (valor) => {
     :
     setMostrar2('ocultar') 
     :
-    mostrar2 === 'imagenArcano'
+    mostrar2 === 'imagenArcano2'
     ?
     ''
     :
-    setMostrar2('imagenArcano'),
+    setMostrar2('imagenArcano2'),
     valor === '' ?
     mostrarMano2 === 'ocultar' ?
     ''
     :
     setmostrarMano2('ocultar') 
     :
-    mostrarMano2 === 'apuntar'
+    mostrarMano2 === 'apuntar2'
     ?
     ''
     :
-    setmostrarMano2('apuntar')
+    setmostrarMano2('apuntar2')
     
 }
 

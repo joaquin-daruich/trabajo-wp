@@ -153,19 +153,30 @@
 
 .imagen-emperador{
     display: flex;
-    height: 8vh;
+    height: 55px;
+    width: 55px;
     position: relative;
     left:  1.5VH;
-    border-radius: 100%;
-    
-    
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.imagen-emperador:hover{
-    height: 33vh;
-    position: relative;
-    top: 11vh;
+
+.imagen-emperador img{
+width: 50%;
 }
+
+
+.imagen-emperador:hover{
+    height: 263px;
+    width: 263px;
+    position: relative;
+    top: 21vh;
+}
+
+
 
 .El-Emperador{
     position: relative;
@@ -255,7 +266,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    background-image:url("../public/caballos.avif");
+    background-image:url("../public/caballos.jpg");
     border: solid rgb(142, 3, 255) 20PX;
     border-top: solid rgb(133, 3, 255) 20PX; 
     border-radius:  13%;
@@ -264,28 +275,33 @@
 .inicio .quien{
     position: absolute;
     width: 36vw;
-    height: 7vh;
+    height: 14vh;
     font-size: 6vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     right: 6vh;
     color: rgb(38, 0, 255);
     background-image: url("../public/fondo-wp-blanco.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .inicio .emper {
-    width: 20vw;
-    height: 50vh;
+    width: 15vw;
+    height: 40vh;
     position: relative;
-    right: 2vh;
+    right: 17vh;
     top: 24vh;
 }
 
 .inicio .enamo {
-    width: 22vw;
+    width: 15vw;
 
     position: relative;
-    left: 2vh;
+    left: 1vh;
     top: 24vh;
-    height: 50vh;
+    height: 40vh;
 }
 
 
@@ -541,15 +557,21 @@
 }
 
 .elegir{
-    color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: rgb(38, 0, 255);
+    border-radius: 50%;
     width: 22vw;
     height: 12vh;
     position: absolute;
     font-size: 8vh;
-    right:  7vh;
+    right:  9vh;
     top: 22vh;
     background-image: url("../public/fondo-wp-blanco.jpg");
 }
+
+
 
 .ocultar{
     display: none;
@@ -562,7 +584,7 @@
 .imagenArcano{
     position: absolute;
     bottom: 37vh;
-    left: 64vh;
+    left: 101vh;
 
 }
 
@@ -601,15 +623,17 @@
 }
 
 .apuntar{
-    background-image: url("../../public/mano.png");
+    background-image: url("../../public/prueba.png");
     position: absolute;
-    color: black;
-    font-weight: 500;
-    font-size: 4vh;
+    color:whitesmoke;
+    font-weight: 7000;
+    font-family:fantasy;
+    font-size: 6vh;
+    font-style: oblique;
     bottom: 44vh;
-    left: 5vh;
+    left: 42vh;
     height: 44vh;
-    width: 34.7vw;
+    width: 26.4vw;
 }
 
 
@@ -620,7 +644,7 @@
 .imagenArcano2{
     position: absolute;
     bottom: 33vh;
-    left: 83vh;
+    left: 63vh;
 
 }
 
@@ -646,7 +670,7 @@
     color: blueviolet;
     position: absolute;
     bottom: 16vh;
-    right: 115vh;
+    right: 155vh;
     width: 26vw;
     background-image: url("../public/fondo-wp-blanco.jpg")
 }
@@ -657,4 +681,31 @@
     position: relative;
     height: 12vh;
     width: 26vw;
+}
+
+
+
+.apuntar2{
+    background-image: url("../../public/prueba.png");
+    position: absolute;
+    color:whitesmoke;
+    font-weight: 7000;
+    font-family:fantasy;
+    font-size: 6vh;
+    font-style: oblique;
+    bottom: 44vh;
+    left: 5vh;
+    height: 44vh;
+    width: 26.4vw;
+}
+
+
+.flechaParaVolver{
+    position: absolute;
+    width: 85px;
+    height: 87px;
+    border-radius: 50%;
+    left: 24vh;
+    background-color: aquamarine;
+    border: none;
 }

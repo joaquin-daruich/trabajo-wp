@@ -136,9 +136,6 @@ const mapeo =   mensajesDe.map((mensaje , index )  =>{
 }
 )
 
-// mapeo.pop(contador),
-// mapeo.pop(contador),
-// mapeo.pop(contador)
 return(
     <>
     
@@ -149,7 +146,9 @@ return(
                 <button  className="flecha" ><i class="bi bi-arrow-left"></i></button>
                 </Link>
                 <Link to={'/info/' + autor}>
-                <img  className="imagen-emperador" src={imagen.imagen}  alt="" />
+                <div className="imagen-emperador">
+                <img   src={imagen.imagen}  alt="" />
+                </div>
                 </Link>
                 <span className="El-Emperador" >{imagen.autor}</span>
                 <span className="grabar"><i  className="bi bi-camera-video-fill"></i></span>
