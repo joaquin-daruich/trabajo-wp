@@ -590,7 +590,7 @@ width: 50%;
 
 .seleccionar{
     width: 100vw;
-    height: 100vh;
+    height: 160vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -604,8 +604,8 @@ width: 50%;
 .contenedor-msj{
     color: blueviolet;
     position: relative;
-    bottom: 8vh;
-    right: 32vh;
+    bottom: 42vh;
+    right: 26vh;
     width: 26vw;
     background-image: url("../public/fondo-wp-blanco.jpg");
 }
@@ -613,8 +613,9 @@ width: 50%;
 .input{
     position: relative;
     height: 12vh;
-    width: 22vw;
-    right: 36vh;
+    width: 27vw;
+    right: 26vh;
+    bottom: 42vh;
 }
 
 .mensaje3{
@@ -700,12 +701,86 @@ width: 50%;
 }
 
 
-.flechaParaVolver{
+.noencontrar{
+    background-image: url("../../public/nosaber.jpg");
+    width: 100vw;
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.notfound{
+    position: relative;
+    bottom: 73vh;
+    left: 13vh;
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 13vh;
+    color: blueviolet;
+    
+}
+
+.notfound2{
+    position: relative;
+    bottom: 23vh;
+    right: 43vh;
+    font-family: cursive;
+    font-weight: 900;
+    font-size: 8vh;
+    color: blue;
+    
+}
+
+.abajo{
     position: absolute;
-    width: 85px;
-    height: 87px;
-    border-radius: 50%;
-    left: 24vh;
-    background-color: aquamarine;
-    border: none;
+    left: 101vh;
+    top: 56vh;
+}
+
+.contenedor-msj3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image:  url("../public/fondo-wp-blanco.jpg");
+    color:blueviolet;
+    font-weight: 7000;
+    font-family:cursive;
+    font-size: 6vh;
+    font-style: oblique;
+    right: 95vh;
+    width: 57vh;
+    border-radius: 30%;
+}
+
+.formCrear{
+    display: flex;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+    flex-direction: column;
+    align-items: start;
+    justify-content: start ;
+    position: absolute;
+    width: 95vh;
+    height: 67vh;
+    left: 26vh;
+    top: 92vh;
+    gap: 8vh;
+}
+
+.formh2{
+display:flex ;
+color:color-mix(in srgb, blue 73%, black 27%);
+font-size: 3.5vh;
+}
+
+
+.formParaHablarDeVuelta{
+    position: absolute;
+    top: 122vh;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+    width: 42vh;
+    height: 10vh;
+    left: 129vh;
 }

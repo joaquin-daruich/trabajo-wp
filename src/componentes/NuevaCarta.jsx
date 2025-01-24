@@ -1,17 +1,38 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useGlobalContext } from './GlobalContext'
+import CrearNuevaPersonaParaHablar from './CrearNuevaPersonaParaHablar'
 
 
 const NuevaCarta = () => {
 const   [numerosBloqueados , setNumerosBloqueados] = useState([])
-
+const [mensajeParaNuevo , setmensajeParaNuevo] = useState('Aca podes volver a hablar con tu nuevo personaje creado, escribiendo el nombre  que le pusiste!')
 const [mensajeDeClick , setmensajeDeClick] = useState('Hace click en el Arcano para hablar con él!')
 const [valor , setValor] = useState('')
 const [valor2 , setValor2] = useState('')
+const [valorDelInput , setValorDelInput] = useState('')
 const {ocultarCarta} = useGlobalContext()
 const estado = "bi bi-check2-all"
+const navegar = useNavigate()
 
+const     guardarFormulario = (e) => {
+    e.preventDefault()
+const formulario = e.target
+const   valoresFormulario = new FormData(formulario)
+const valorInput = valoresFormulario.get('valorInput')
+localStorage.getItem(valorInput) ? 
+navegar('/perfiles/' + valorInput)
+:
+setmensajeParaNuevo('No se encontro el nombre: ' + valorInput)}
+useEffect(()=>{
+    valorDelInput === '' ?
+    setmensajeParaNuevo('Aca podes volver a hablar con tu nuevo personaje creado, escribiendo el nombre  que le pusiste!')
+    :
+    localStorage.getItem(valorDelInput) ? 
+    setmensajeParaNuevo('Tocá enter para hablar con  ' + valorDelInput)
+    :
+    setmensajeParaNuevo('No se encontro el nombre: ' + valorDelInput)
+}, [valorDelInput])
 const mostrarAutorDependiendoElNumero = (valor) =>{
 return(
     valor === 1 ? 'El Mago'
@@ -83,7 +104,7 @@ const nuevoArcanoMayor = {
 const hablarConElNuevoArcano = () => {
     localStorage.setItem(valor , JSON.stringify(nuevoArcanoMayor))
 }
-const capturarValor = (e ) => {
+const capturarValor = (e  ) => {
  setValor(e.target.value)
  setValor2('')
 }
@@ -94,6 +115,10 @@ const capturarValor2 = (e ) => {
      numerosBloqueados.includes(e.target.value) ?
 setBloquear('Hace click para desbloquearlo!') : 
 setBloquear('Hace click en el Arcano para bloquearlo!')
+   }
+
+   const capturarValorDelInput = (e) => {
+    setValorDelInput(e.target.value)
    }
 
 
@@ -251,7 +276,8 @@ DesbloquearNumero(valor2)
 }
 buscarNumerosBloqueados()
   return (
-    <form className='seleccionar' onSubmit={seleccionarArcano}>
+<div className='seleccionar'>
+    <form  onSubmit={seleccionarArcano}>
         <div className='contenedor-msj'>
         <h1 className='mensaje3'>Escribí un numero del 1 al 22</h1>
         <h2 className='mensaje3'>El numero que eligas va a corresponder a su respectivo arcano mayor</h2>
@@ -277,6 +303,16 @@ buscarNumerosBloqueados()
         <Link onClick={hablarConElNuevoArcano} to={'/perfiles/' + valor}><img className={mostrar} src={nuevoArcanoMayor.imagen}></img></Link>
     }
     </form>
+
+        <h1 className='contenedor-msj3'>Abajo podes crear un nuevo perfil para hablarle!</h1>
+        <img className='abajo' src="../../public/manoAbajo.png" alt="" />
+
+    <CrearNuevaPersonaParaHablar></CrearNuevaPersonaParaHablar>
+    <form className='formParaHablarDeVuelta' onSubmit={guardarFormulario}>
+        <h2>{mensajeParaNuevo}</h2>
+    <input className='inputHablar' type="text" name='valorInput' value={valorDelInput} onChange={capturarValorDelInput} />
+    </form>
+</div>
   )
 }
 

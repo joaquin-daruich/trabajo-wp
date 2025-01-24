@@ -17,9 +17,7 @@ const {mostrarEnamorado} = useGlobalContext()
   return (
     <>
     <div className='inicio'>
-    <Link to={'/'}>
-        <button className="flechaParaVolver" ><i class="bi bi-arrow-left"></i></button>
-    </Link>
+
         <h1 className='quien'>Con quien queres hablar? </h1>
         <div className={mostrarEmperador} >
             <Link to={'/perfiles/' +  'El Emperador'}  >

@@ -3,6 +3,8 @@
 
 
 const separarMensajesPorAutor = (array , mensajeDe , autor ) => {
+  const autorNuevo = JSON.parse(localStorage.getItem(autor)) 
+
     mensajeDe.find((buscadorDeAutor) => buscadorDeAutor.autor === autor) ?
     '' :
    autor === 'El Emperador' ?
@@ -14,7 +16,7 @@ const separarMensajesPorAutor = (array , mensajeDe , autor ) => {
   mensajeDe.find((buscadorDeNumero) => buscadorDeNumero.imagen === "../../public/"+autor+".jpg") ?
   ''
   :
-  mensajeDe.push (JSON.parse((localStorage.getItem(autor))))
+  mensajeDe.push (autorNuevo)
 }
 
 export {separarMensajesPorAutor}
