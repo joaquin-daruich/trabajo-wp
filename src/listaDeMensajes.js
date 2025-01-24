@@ -1,4 +1,4 @@
-import React from "react"
+
 const estado = "bi bi-check2-all"
 
 const MensajesLista = 
