@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
 import Mensajes from './componentes/Mensajes.jsx'
-import { MensajesLista } from './ListaDeMensajes'
 import { Link, Route, Routes } from 'react-router-dom'
 import {Inicio} from './componentes/Inicio'
 import InformacionAutor from './componentes/InformacionAutor'
