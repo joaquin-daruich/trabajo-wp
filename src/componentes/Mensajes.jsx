@@ -94,40 +94,40 @@ const prueba = (e) => {
 }
 const mensajesNuevos = []
 
+buscarNuevoNumeroParaKey()
 const mapeo =   mensajesDe.map((mensaje , index )  =>{
     
-    return(
-   
+    return (
     mensaje.id ===  'mensaje-nuevo'?
     
     contador > 1 ?
     mensajesNuevos.unshift (
-        <div className="mensajes-nuevos" > 
-        <div className={mensaje.id} key={ index}>
-        <p className={"contenido-" + mensaje.id }>{mensaje.contenido} </p>
-        <span className={"hora-" + mensaje.id}>{mensaje.hora} </span>
-        <span className={"estado-" + mensaje.id}>
-        <i className={mensaje.estado}></i>
+        <div   className="mensajes-nuevos" > 
+        <div  className={mensaje.id} >
+        <p  className={"contenido-" + mensaje.id }>{mensaje.contenido} </p>
+        <span  className={"hora-" + mensaje.id}>{mensaje.hora} </span>
+        <span  className={"estado-" + mensaje.id}>
+        <i  className={mensaje.estado}></i>
         </span>
         </div>
         </div>)
         :
     mensajesNuevos.push (
-    <div className="mensajes-nuevos" > 
-    <div className={mensaje.id} key={ index}>
-    <p className={"contenido-" + mensaje.id}>{mensaje.contenido}</p>
+    <div  className="mensajes-nuevos" > 
+    <div className={mensaje.id}>
+    <p  className={"contenido-" + mensaje.id}>{mensaje.contenido}</p>
     <span className={"hora-" + mensaje.id}>{mensaje.hora}</span>
-    <span className={"estado-" + mensaje.id}>
-    <i className={mensaje.estado}></i>
+    <span  className={"estado-" + mensaje.id}>
+    <i   className={mensaje.estado}></i>
     </span>
     </div>
     </div>)
 :
 <div className="mensajes-viejos">
-    <div className={mensaje.id} key={ index}>
-        <p className={ "contenido" + mensaje.id}>{mensaje.contenido} </p>
-        <span className={"hora-" + mensaje.id}>{mensaje.hora }</span>
-        <span className={"estado-" + mensaje.id}>
+    <div  className={mensaje.id} >
+        <p  className={ "contenido" + mensaje.id}>{mensaje.contenido} </p>
+        <span  className={"hora-" + mensaje.id}>{mensaje.hora }</span>
+        <span  className={"estado-" + mensaje.id}>
         <i className={mensaje.estado}></i>
         </span>
     </div>
@@ -140,10 +140,10 @@ return(
     <>
     
     
-    <div  className="Mensajes">
+    <div   className="Mensajes">
     <div className="Perfil">
                 <Link to={'/Inicio'}>
-                <button  className="flecha" ><i class="bi bi-arrow-left"></i></button>
+                <button  className="flecha" ><i className="bi bi-arrow-left"></i></button>
                 </Link>
                 <Link to={'/info/' + autor}>
                 <div className="imagen-emperador">
@@ -152,8 +152,8 @@ return(
                 </Link>
                 <span className="El-Emperador" >{imagen.autor}</span>
                 <span className="grabar"><i  className="bi bi-camera-video-fill"></i></span>
-                <span className="llamar"><i class="bi bi-telephone-fill"></i></span>
-                <span className="pintar"><i class="bi bi-grip-vertical"></i></span>
+                <span className="llamar"><i className="bi bi-telephone-fill"></i></span>
+                <span className="pintar"><i className="bi bi-grip-vertical"></i></span>
                 
             </div>
             {mensajesNuevos}
