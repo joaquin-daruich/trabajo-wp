@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { MensajesLista } from "../ListaDeMensajes";
-import {  separarMensajesPorAutor } from "./funciones";
 
+import {  separarMensajesPorAutor } from "./funciones";
+import { MensajesLista } from "../ListaDeMensajes";
 
 
 
