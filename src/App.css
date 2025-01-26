@@ -812,9 +812,9 @@ font-size: 3.5vh;
     }
     .apuntar{
         left: 2vh;
-        bottom: 87vh;
+        bottom: 83vh;
         width: 89vw;
-        height: 12vh;
+        height: 6vh;
         font-family: "Lora", serif;
        font-weight: 700;
        color: black;
@@ -856,6 +856,7 @@ font-size: 3.5vh;
     .contenedor-msj3{
         position: relative;
         right:  22vh;
+        bottom: 42vh;
         width: 62vw;
         height: 12vh;
         font-size: 1.7vh;
