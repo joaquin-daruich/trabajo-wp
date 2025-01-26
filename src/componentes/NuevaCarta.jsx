@@ -93,7 +93,7 @@ const nuevoArcanoMayor = {
     hora: valor+':0'+valor,
     estado: estado,
     id:   'uno',
-    imagen:valor === '' ? "../../public/"+valor2+".jpg" : "../../public/"+valor+".jpg" ,
+    imagen:valor === '' ? valor2+".jpg" : valor+".jpg" ,
     ip: 1,
     informacionDeAutor: mostrarInformacionDependiendoElAutor(Number(valor))
 }
@@ -294,18 +294,18 @@ buscarNumerosBloqueados()
         <div className={mostrarMano2}>
         {bloquear}
         </div>
-        <button  onClick={bloquearCarta} className={mostrar2}><img src={Number(valor2) === 4 ? "../../public/LeEmpereur.jpg" : Number(valor2) === 6 ? "../../public/enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></button>
+        <button  onClick={bloquearCarta} className={mostrar2}><img src={Number(valor2) === 4 ? "LeEmpereur.jpg" : Number(valor2) === 6 ? "enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></button>
         {Number(valor) === 4         ?   <Link to={'/perfiles/' +  'El Emperador'}  >
-                        <img className={mostrar} src={"../../public/LeEmpereur.jpg"} alt="" />
+                        <img className={mostrar} src={"LeEmpereur.jpg"} alt="" />
                     </Link> : Number(valor) === 6         ?             <Link to={'/perfiles/' + 'El Enamorado'} >
-                                    <img className={mostrar} src={"../../public/enamorado.jpg"} alt="" />
+                                    <img className={mostrar} src={"enamorado.jpg"} alt="" />
                                 </Link> :
         <Link onClick={hablarConElNuevoArcano} to={'/perfiles/' + valor}><img className={mostrar} src={nuevoArcanoMayor.imagen}></img></Link>
     }
     </form>
 
         <h1 className='contenedor-msj3'>Abajo podes crear un nuevo perfil para hablarle!</h1>
-        <img className='abajo' src="../../public/manoAbajo.png" alt="" />
+        <img className='abajo' src="manoAbajo.png" alt="" />
 
     <CrearNuevaPersonaParaHablar></CrearNuevaPersonaParaHablar>
     <form className='formParaHablarDeVuelta' onSubmit={guardarFormulario}>
