@@ -13,7 +13,7 @@ const separarMensajesPorAutor = (array , mensajeDe , autor ) => {
    autor === 'El Enamorado' ?
   mensajeDe.push ( array.find((buscador)=>buscador.autor === 'El Enamorado')) && mensajeDe.push  (array.find((buscador)=>buscador.autor === 'El Enamorado' && buscador.ip > 3 )) 
   :
-  mensajeDe.find((buscadorDeNumero) => buscadorDeNumero.imagen === "../../public/"+autor+".jpg") ?
+  mensajeDe.find((buscadorDeNumero) => buscadorDeNumero.imagen === "/"+autor+".jpg") ?
   ''
   :
   mensajeDe.push (autorNuevo)
