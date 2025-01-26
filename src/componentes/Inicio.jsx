@@ -14,15 +14,21 @@ const {mostrarEmperador} = useGlobalContext()
 const {mostrarEnamorado} = useGlobalContext()
 
 
-
   return (
+    
     <>
+    
     <div className='inicio'>
+        <img src='../public/LeEmpereur.jpg'></img>
+        <img src="../../public/LeEmpereur.jpg"></img>
+        <img src='../../public/LeEmpereur.jpg'></img>
+        <img src='public/LeEmpereur.jpg'></img>
+        
 
         <h1 className='quien'>Con quien queres hablar? </h1>
         <div className={mostrarEmperador} >
             <Link to={'/perfiles/' +  'El Emperador'}  >
-                <image className='emper' src={emperador.imagen} alt="" />
+                <img className='emper' src={emperador.imagen} alt="" />
             </Link>
         </div>
         <div className={mostrarEnamorado}>
