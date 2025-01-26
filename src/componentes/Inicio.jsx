@@ -22,7 +22,7 @@ const {mostrarEnamorado} = useGlobalContext()
         <h1 className='quien'>Con quien queres hablar? </h1>
         <div className={mostrarEmperador} >
             <Link to={'/perfiles/' +  'El Emperador'}  >
-                <img className='emper' src={emperador.imagen} alt="" />
+                <image className='emper' src={emperador.imagen} alt="" />
             </Link>
         </div>
         <div className={mostrarEnamorado}>
