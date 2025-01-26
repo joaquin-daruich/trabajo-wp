@@ -19,11 +19,7 @@ const {mostrarEnamorado} = useGlobalContext()
     <>
     
     <div className='inicio'>
-        <img src='../public/LeEmpereur.jpg'></img>
-        <img src="../../public/LeEmpereur.jpg"></img>
-        <img src='../../public/LeEmpereur.jpg'></img>
-        <img src='public/LeEmpereur.jpg'></img>
-        <div className='prueba9'>sera?</div>
+    {console.log(emperador.imagen)}
         
 
         <h1 className='quien'>Con quien queres hablar? </h1>
