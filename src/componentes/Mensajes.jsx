@@ -21,6 +21,7 @@ separarMensajesPorAutor(MensajesLista , mensajesDe , autor)
 
 
 const imagen = mensajesDe.find((imagen) => imagen.imagen)
+console.log(imagen.imagen)
 
 const  [valorInput , setValorInput] = useState()
 
