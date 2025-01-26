@@ -93,7 +93,7 @@ const nuevoArcanoMayor = {
     hora: valor+':0'+valor,
     estado: estado,
     id:   'uno',
-    imagen:valor === '' ? valor2+".jpg" : valor+".jpg" ,
+    imagen:valor === '' ? '/' + valor2+".jpg" : '/' + valor+".jpg" ,
     ip: 1,
     informacionDeAutor: mostrarInformacionDependiendoElAutor(Number(valor))
 }

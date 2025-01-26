@@ -687,7 +687,7 @@ width: 50%;
 
 
 .apuntar2{
-    background-image: url("prueba.png");
+    background-image: url("/prueba.png");
     position: absolute;
     color:whitesmoke;
     font-weight: 7000;

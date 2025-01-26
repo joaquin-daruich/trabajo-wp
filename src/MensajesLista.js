@@ -9,7 +9,7 @@ const MensajesLista =
       hora: '4:04',
       estado: estado,
       id:   'uno',
-      imagen:"LeEmpereur.jpg",
+      imagen:"/LeEmpereur.jpg",
       ip: 1 
     },
     {
@@ -18,7 +18,7 @@ const MensajesLista =
       hora: '4:04',
       estado:  estado,
       id:   'uno', 
-      imagen:"LeEmpereur.jpg",
+      imagen:"/LeEmpereur.jpg",
       ip: 2
     },
     {
@@ -27,7 +27,7 @@ const MensajesLista =
       hora: '6:06',
       estado: estado,
       id:   'uno',
-      imagen:  "enamorado.jpg",
+      imagen:  "/enamorado.jpg",
       ip: 3,
     },
     {
@@ -36,7 +36,7 @@ const MensajesLista =
       hora: '6:06',
       estado:  estado,
       id:   'uno',
-      imagen:  "public/enamorado.jpg",
+      imagen:  "/enamorado.jpg",
       ip: 4,
     },
 

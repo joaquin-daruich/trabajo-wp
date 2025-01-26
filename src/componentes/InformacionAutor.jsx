@@ -27,11 +27,11 @@ const eliminarHistorial = () => {
     
 {autor === 'El Emperador' ? 
 <div>
-  <img className='imagenArcano2' src="../../public/LeEmpereur.jpg" alt='' />
+  <img className='imagenArcano2' src="/LeEmpereur.jpg" alt='' />
   <h1 className='informacion-autor'>El Emperador representa el dominio total de la materia y la estabilidad material</h1> </div>:
   autor === 'El Enamorado'?
   <div>
-  <img className='imagenArcano2' src="../../public/enamorado.jpg" alt="" />
+  <img className='imagenArcano2' src="/enamorado.jpg" alt="" />
 <h1 className='informacion-autor'>El Enamorado es la bienaventuranza y el amor por el mundo</h1></div>: 
     <div>
     <img className='imagenArcano2' src={imagen.imagen} alt="" />
