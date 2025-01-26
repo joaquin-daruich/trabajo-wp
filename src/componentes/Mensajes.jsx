@@ -10,7 +10,6 @@ import { MensajesLista } from "../ListaDeMensajes";
 
 const Mensajes =  () => {
 
-
 const [mensajesDe , setMensajesDe  ] = useState([{}])
 
 
@@ -94,7 +93,6 @@ const prueba = (e) => {
 }
 const mensajesNuevos = []
 
-buscarNuevoNumeroParaKey()
 const mapeo =   mensajesDe.map((mensaje , index )  =>{
     
     return (

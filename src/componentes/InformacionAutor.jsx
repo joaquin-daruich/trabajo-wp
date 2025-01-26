@@ -20,7 +20,7 @@ const eliminarHistorial = () => {
 <div className='Mensajes'>
   <div className='Perfil'>
   <Link to={'/perfiles/' + autor }>
-        <button className="flecha" ><i class="bi bi-arrow-left"></i></button>
+        <button className="flecha" ><i className="bi bi-arrow-left"></i></button>
     </Link>
   </div>
 
