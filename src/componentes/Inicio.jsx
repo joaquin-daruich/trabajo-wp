@@ -19,7 +19,6 @@ const {mostrarEnamorado} = useGlobalContext()
     <>
     
     <div className='inicio'>
-    {console.log(emperador.imagen)}
         
 
         <h1 className='quien'>Con quien queres hablar? </h1>

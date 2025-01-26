@@ -43,7 +43,7 @@ console.log(nuevoAutor)
         <h2  className='formh2' > Indique la descripcion de esta persona
          <input className='forminput' type="text" name='descripcion'/> 
         </h2>
-        <button type='submit'> Enviar</button>
+        <button className='btn-enviar' type='submit'> Enviar</button>
     </form>
   )
 }

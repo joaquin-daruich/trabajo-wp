@@ -294,7 +294,7 @@ buscarNumerosBloqueados()
         <div className={mostrarMano2}>
         {bloquear}
         </div>
-        <button  onClick={bloquearCarta} className={mostrar2}><img src={Number(valor2) === 4 ? "LeEmpereur.jpg" : Number(valor2) === 6 ? "enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></button>
+        <button  onClick={bloquearCarta} ><img className={mostrar2} src={Number(valor2) === 4 ? "LeEmpereur.jpg" : Number(valor2) === 6 ? "enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></button>
         {Number(valor) === 4         ?   <Link to={'/perfiles/' +  'El Emperador'}  >
                         <img className={mostrar} src={"LeEmpereur.jpg"} alt="" />
                     </Link> : Number(valor) === 6         ?             <Link to={'/perfiles/' + 'El Enamorado'} >
@@ -309,7 +309,7 @@ buscarNumerosBloqueados()
 
     <CrearNuevaPersonaParaHablar></CrearNuevaPersonaParaHablar>
     <form className='formParaHablarDeVuelta' onSubmit={guardarFormulario}>
-        <h2>{mensajeParaNuevo}</h2>
+        <h2 className='mensajeParaNuevo'>{mensajeParaNuevo}</h2>
     <input className='inputHablar' type="text" name='valorInput' value={valorDelInput} onChange={capturarValorDelInput} />
     </form>
 </div>

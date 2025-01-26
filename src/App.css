@@ -320,6 +320,7 @@ width: 50%;
         top: 12vh;
         left: 62vh;
     }
+}
 
     
 .Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
@@ -439,6 +440,7 @@ width: 50%;
         left: 62vh;
     }
 
+
     
 .Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
 
@@ -509,7 +511,7 @@ width: 50%;
 .imagen-emperador{
     top: 2vh;
 }
-}
+
 
 
 .iniciarSesion{
@@ -673,7 +675,7 @@ width: 50%;
     bottom: 16vh;
     right: 155vh;
     width: 26vw;
-    background-image: url("fondo-wp-blanco.jpg")
+    background-image: url("/fondo-wp-blanco.jpg")
 }
 
 
@@ -702,7 +704,7 @@ width: 50%;
 
 
 .noencontrar{
-    background-image: url("nosaber.jpg");
+    background-image: url("/nosaber.jpg");
     width: 100vw;
     height: 180vh;
     display: flex;
@@ -787,8 +789,127 @@ font-size: 3.5vh;
 
 
 .prueba9{
-    background-image: url("LeEmpereur.jpg");
+    background-image: url("/LeEmpereur.jpg");
     height: 98vh;
     width: 85vw;
     position: absolute;
+}
+
+@media screen and (max-width: 700px)  {
+    .contenedor-msj{
+        position: relative;
+        width: 22vw;
+        height: 48vh;
+        right: 43vh;
+        bottom: 28vh;
+    }
+    .mensaje3{
+        font-size: 1.6vh;
+    }
+    .apuntar{
+        left: 17vh;
+        bottom: 87vh;
+        width: 65vw;
+        height: 12vh;
+        background-image: url("/prueba.png") ;
+    }
+    .imagenArcano{
+        left: 27vh;
+        width: 25vw;
+        height: 40vh;
+    }
+    .imagenArcano2{
+        left: 27vh;
+        width: 25vw;
+        height: 40vh;
+        bottom: 37vh;
+    }
+    .apuntar2{
+        left: 17vh;
+        bottom: 87vh;
+        width: 65vw;
+        height: 12vh;
+        background-image: url("/prueba.png") ;
+    }
+
+    .contenedor-msj2{
+        position: relative;
+        left: 2vh;
+        bottom: 45vh;
+        width: 35vw;
+        height: 12vh;
+    }
+    .mensaje2{
+        font-size: 1.6vh;
+    }
+    .contenedor-msj3{
+        position: relative;
+        right:  22vh;
+        bottom: 42vh;
+        width: 62vw;
+        height: 12vh;
+        font-size: 1.7vh;
+    }
+    .abajo{
+        position: absolute;
+        left:  40vh;
+        top: 80vh;
+        width: 12vh;
+    }
+    .input{
+        position: relative;
+        height: 12vh;
+        width: 22vh;
+        bottom: 28vh;
+        right: 44vh;
+    }
+    .input2{
+        position: relative;
+        height: 8vh;
+        width: 27vh;
+        bottom: 7vh;
+        right: 6vh;
+    }
+    .input2::placeholder{
+        font-size: 1.6vh;
+    }
+    .seleccionar{
+        width: 100vw;
+        height: 180vh;
+    }
+    .formCrear{
+        width: 52vh;
+        height: 38vh;
+        gap: 2vh;
+        left: 2vh;
+    }
+    .formh2{
+        font-size: 1.7vh;
+    }
+
+    .formParaHablarDeVuelta{
+        position: absolute;
+       left: 2vh;
+        height: 17vh;
+        width: 87vw;
+        top: 162vh;
+    }
+    .forminput{
+        border: none;
+    }
+
+    .mensajeParaNuevo{
+        font-size: 2vh;
+    }
+
+    .inputHablar{
+        width: 88vw;
+        height: 5vh;
+    }
+    .btn-enviar{
+        position: absolute;
+        top: 38vh;
+        width: 25vh;
+    }
+    
 }
