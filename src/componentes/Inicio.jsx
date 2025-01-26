@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MensajesLista } from '../ListaDeMensajes';
+import { MensajesLista } from '../MensajesLista';
 import { useGlobalContext } from './GlobalContext';
 
 
