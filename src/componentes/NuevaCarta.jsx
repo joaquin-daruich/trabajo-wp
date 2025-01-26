@@ -305,7 +305,7 @@ buscarNumerosBloqueados()
     </form>
 
         <h1 className='contenedor-msj3'>Abajo podes crear un nuevo perfil para hablarle!</h1>
-        <img className='abajo' src="manoAbajo.png" alt="" />
+        <img className='abajo' src="/manoAbajo.png" alt="" />
 
     <CrearNuevaPersonaParaHablar></CrearNuevaPersonaParaHablar>
     <form className='formParaHablarDeVuelta' onSubmit={guardarFormulario}>

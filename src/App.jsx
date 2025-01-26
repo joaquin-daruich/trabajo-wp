@@ -10,7 +10,6 @@ import Error404 from './componentes/Error404.jsx'
 import CrearNuevaPersonaParaHablar from './componentes/CrearNuevaPersonaParaHablar.jsx'
 
 
-
 function App() {
 
 

@@ -7,6 +7,10 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 14.2px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 .hache{
     flex: 2;
     height: 22vh;
@@ -800,18 +804,25 @@ font-size: 3.5vh;
         position: relative;
         width: 22vw;
         height: 48vh;
-        right: 43vh;
+        right: 22vh;
         bottom: 28vh;
     }
     .mensaje3{
         font-size: 1.6vh;
     }
     .apuntar{
-        left: 17vh;
+        left: 2vh;
         bottom: 87vh;
-        width: 65vw;
+        width: 89vw;
         height: 12vh;
-        background-image: url("/prueba.png") ;
+        font-family: "Lora", serif;
+       font-weight: 700;
+       color: black;
+       background-image: url("/fondo-wp-blanco.jpg");
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 3.8vh;
     }
     .imagenArcano{
         left: 27vh;
@@ -849,6 +860,9 @@ font-size: 3.5vh;
         width: 62vw;
         height: 12vh;
         font-size: 1.7vh;
+        font-family: "Lora", serif;
+        font-weight: 700;
+        color: black;
     }
     .abajo{
         position: absolute;
@@ -861,7 +875,7 @@ font-size: 3.5vh;
         height: 12vh;
         width: 22vh;
         bottom: 28vh;
-        right: 44vh;
+        right: 28vh;
     }
     .input2{
         position: relative;
