@@ -814,14 +814,14 @@ font-size: 3.5vh;
         left: 2vh;
         bottom: 83vh;
         width: 89vw;
-        height: 6vh;
+        height: 26vh;
         font-family: "Lora", serif;
        font-weight: 700;
        color: black;
        background-image: url("/fondo-wp-blanco.jpg");
        display: flex;
        justify-content: center;
-       align-items: center;
+       align-items: end;
        font-size: 3.8vh;
     }
     .imagenArcano{
