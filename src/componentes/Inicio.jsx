@@ -36,7 +36,7 @@ const {mostrarEnamorado} = useGlobalContext()
 
             <h1 className='elegir'>Elegí mas!</h1>
             <Link to={'/crearNuevaCarta'}>
-            <img  className='tarot' src="../../public/completo.jpg" alt="" />
+            <img  className='tarot' src="/completo.jpg" alt="" />
             </Link>
 
     </div>
