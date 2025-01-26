@@ -624,7 +624,7 @@ width: 50%;
 }
 
 .apuntar{
-    background-image: url("prueba.png");
+    background-image: url("/prueba.png");
     position: absolute;
     color:whitesmoke;
     font-weight: 7000;
