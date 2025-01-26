@@ -673,7 +673,7 @@ width: 50%;
     bottom: 16vh;
     right: 155vh;
     width: 26vw;
-    background-image: url("../public/fondo-wp-blanco.jpg")
+    background-image: url("fondo-wp-blanco.jpg")
 }
 
 
@@ -687,7 +687,7 @@ width: 50%;
 
 
 .apuntar2{
-    background-image: url("../../public/prueba.png");
+    background-image: url("prueba.png");
     position: absolute;
     color:whitesmoke;
     font-weight: 7000;
@@ -702,7 +702,7 @@ width: 50%;
 
 
 .noencontrar{
-    background-image: url("../../public/nosaber.jpg");
+    background-image: url("nosaber.jpg");
     width: 100vw;
     height: 180vh;
     display: flex;
@@ -787,7 +787,7 @@ font-size: 3.5vh;
 
 
 .prueba9{
-    background-image: url("../public/LeEmpereur.jpg");
+    background-image: url("LeEmpereur.jpg");
     height: 98vh;
     width: 85vw;
     position: absolute;
