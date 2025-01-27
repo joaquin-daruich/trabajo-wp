@@ -43,7 +43,7 @@
     position: relative;
     bottom: 46vh;
     right:  16vh;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -451,7 +451,7 @@ width: 50%;
     font-weight: 7000;
     font-family:fantasy;
     font-size: 25px;
-    width: 33%;
+    width: 26.2%;
     height: 70%;
 }
 
@@ -470,7 +470,7 @@ width: 50%;
     font-weight: 7000;
     font-family:fantasy;
     font-size: 25px;
-    width: 38%;
+    width: 26.2%;
     height: 70%;
 }
 
@@ -607,7 +607,6 @@ height: 60%;
 
 .eliminarHistorial{
     display: flex;
-    background-color: rgba(255, 0, 0, 0.507);
     position: absolute;
     bottom: 55vh;
     width: 23vw;
@@ -615,6 +614,7 @@ height: 60%;
     left: 12vh;
     justify-content: center;
     align-items: center;
+    color: blueviolet;
 }
 
 
@@ -662,4 +662,9 @@ height: 60%;
 
 
 
-
+.informaciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
