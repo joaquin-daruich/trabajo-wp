@@ -301,7 +301,7 @@ const NuevaCarta = () => {
                 <div className={mostrarMano2}>
                     {bloquear}
                 </div>
-                <div className={mostrar2} onClick={bloquearCarta} ><img src={Number(valor2) === 4 ? "/LeEmpereur.jpg" : Number(valor2) === 6 ? "/enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></div>
+                <div className={mostrar2} onClick={bloquearCarta} ><img className='arcano2' src={Number(valor2) === 4 ? "/LeEmpereur.jpg" : Number(valor2) === 6 ? "/enamorado.jpg" : nuevoArcanoMayor.imagen} alt="" /></div>
                 <div className='contenedor-msj'>
                     <h1 className='mensaje3'>Si hay alguna carta que no te gusta escribi su numero  y bloqueala!</h1>
                     <input className='inputDeMsj' onChange={capturarValor2} value={valor2} type="number" placeholder='Escribí alguna carta que quieras bloquear' />

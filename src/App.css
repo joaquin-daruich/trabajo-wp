@@ -419,10 +419,12 @@ width: 50%;
     display: flex;
     flex-direction: column;
     background-image: url("../public/el-jardin.jpg");
+    flex-wrap: wrap;
 }
 
 .bloquearYHablar{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     height: 40%;
@@ -563,6 +565,47 @@ height: 15%;
     }
 
 
+    @media screen and (max-width: 525px) {
+ .contenedor-msj{
+    height: 60%;
+    width: 20%;
+ }
+ .mensaje3{
+    font-size: 8px;
+ }
+ .apuntar{
+    width: 17%;
+    background-image: none;
+    font-size: 16px
+ }
+ .imagenArcano{
+    width:50%;
+    height: 60%;
+ }
+ .inputDeMsj{
+  font-size: 8px;
+}
+
+.apuntar2{
+    width: 40%;
+    height: 10%;
+    background-image: none;
+    font-size: 16px
+ }
+ .arcano2{
+    width:100%;
+height: 60%;
+ }
+
+ 
+    
+    }
+    
+    @media screen and (min-width: 525px) {
+     
+    
+    
+    }
 
 
 .informacion-autor{
