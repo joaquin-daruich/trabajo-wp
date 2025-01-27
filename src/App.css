@@ -43,7 +43,7 @@
     position: relative;
     bottom: 46vh;
     right:  16vh;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .Mensajes .uno .contenido-uno{
-    left: 6VH;
+    position: relative;
     color: #000306;
     font-weight: 700;;
     height: 8vh;
@@ -65,12 +65,12 @@
 }
 
 .Mensajes .uno .hora-uno{
-    right:           3vh;
+    
         color: rgb(230, 203, 203);
     font-weight: 900;
     font-size:  11px;
     font-style: italic;
-    top:        6vw;
+  
     position: relative;
     
 }
@@ -85,6 +85,7 @@
     width:  6vw;
     height: 16vh;
     position: absolute;
+    flex: 3;
 }
 
 .Mensajes .enviar .Enviar-Mensaje{
@@ -94,27 +95,12 @@
     width:  65vw;
     height:     20vh;
     flex: 2;
-
+    position: relative;
     
 }
 
 
-.Mensajes .enviar .clase-2{
-    border: none;
-    border-radius: 22%;
-    background-color: white ;
-    width:  70vw;
-    height:     20vh;
-    flex: 2;
-}
 
-.Mensajes .enviar .clase-2::first-line{
-    position: absolute;
-    left: 6vh;
-    bottom: 5vh;
-    color: blueviolet;
-
-}
 
 .Mensajes .enviar  .Enviar-Mensaje::placeholder{
     display: flex;
@@ -221,26 +207,29 @@ width: 50%;
   justify-content: end;
   align-items: end;
   flex-direction: column-reverse;
-  bottom: 12vh;
+  bottom: 65px;
   position: relative;
   right: 3vh;
   
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: rgb(226,254,198);
     border-radius:  15%;
     width: 40vw;
     height: 10vh;
     box-shadow: rgba(11, 20, 26, 0.13) 0px 1px 0.5px 0px;
+    
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
     position: relative;
     color: #2d3f30;
     font-weight: 600;
-    top: 4VH;
-    left: 2VH;
+
     
 
 }
@@ -256,9 +245,9 @@ width: 50%;
 }
 
 .Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    position: relative;
+    position: absolute;
     color: blue;
-    left:   16.5vh;
+    left:   92%;
     top: 4.5vh;
 
 }
@@ -606,12 +595,7 @@ height: 60%;
     
     }
     
-    @media screen and (min-width: 525px) {
-     
-    
-    
-    }
-
+   
 
 .informacion-autor{
     font-size: 4vh;

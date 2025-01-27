@@ -25,7 +25,6 @@ const imagen = mensajesDe.find((imagen) => imagen.imagen)
 
 const  [valorInput , setValorInput] = useState()
 
-const  [valorClass , setValorClass] = useState("Enviar-Mensaje")
 
 
 
@@ -43,8 +42,6 @@ const nuevoMensaje = {
 }
 
 
-
-const objetoDeClasname = [valorClass]
 
 
 
@@ -71,7 +68,6 @@ buscarMensajesNuevos(mensajesDe, setMensajesDe , 'mensajes De ' )
 buscarMensajesNuevos(mensajesDe, setContador , 'contador de ' )
 
  const pruebasubmitdos = () => {
-    setValorClass("Enviar-Mensaje")
         valorInput === '' ?
         ''
         :
@@ -87,7 +83,6 @@ buscarMensajesNuevos(mensajesDe, setContador , 'contador de ' )
 
 const prueba = (e) => {
     return(
-    setValorClass('clase-2'),
     setValorInput(e.target.value),
     setCambiarAlEscribir('ahora si se puede enviar') )
 
@@ -163,7 +158,7 @@ return(
             <form >
             <div  className="enviar">
             <label htmlFor="nuevos-mensajes" >
-            <input onChange={prueba}  type="text" className={objetoDeClasname[0]} placeholder={'Enviar mensaje a '+ imagen.autor}  value={valorInput} />
+            <input onChange={prueba}  type="text" className='Enviar-Mensaje' placeholder={'Enviar mensaje a '+ imagen.autor}  value={valorInput} />
             </label>
             
             </div>
@@ -172,7 +167,7 @@ return(
             <form onSubmit={pruebasubmit}>
             <div  className="enviar">
             <label htmlFor="nuevos-mensajes" >
-            <input onChange={prueba}  type="text" className={objetoDeClasname[0]} placeholder={'Enviar mensaje a '+ imagen.autor}  value={valorInput} />
+            <input onChange={prueba}  type="text" className='Enviar-Mensaje' placeholder={'Enviar mensaje a '+ imagen.autor}  value={valorInput} />
             </label>
             
             </div>
