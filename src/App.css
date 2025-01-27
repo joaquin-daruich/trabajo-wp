@@ -316,7 +316,20 @@ width: 50%;
     height: 70%;
 }
 
-
+@media screen and (max-width: 600px) {
+    .inicio .emper {
+        width: 55%;
+        height: 65%;
+    }
+    
+    .inicio .enamo {
+        width: 55%;
+        height: 65%;
+    }
+    .inicio.imagenesAElegir{
+        height: 60%;
+    }
+}
 
 
  
