@@ -314,21 +314,45 @@ width: 50%;
     flex-direction: row;
     justify-content: space-around;
     height: 70%;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 525px) {
+ 
     .inicio .emper {
-        width: 75%;
+        width: 123px;
         height: 65%;
+        
     }
     
     .inicio .enamo {
-        width: 75%;
+        width: 123px;
         height: 65%;
     }
-    .inicio.imagenesAElegir{
-        height: 60%;
+    .inicio .tarot {
+        width: 283px;
+        height: 90%;
     }
+
+}
+
+@media screen and (min-width: 525px) {
+ 
+    .inicio .emper {
+        width: 143px;
+        height: 65%;
+        
+    }
+    
+    .inicio .enamo {
+        width: 143px;
+        height: 65%;
+    }
+    .inicio .tarot {
+        width: 423px;
+        height: 65%;
+    }
+
 }
 
 
