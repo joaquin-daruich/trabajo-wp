@@ -318,12 +318,12 @@ width: 50%;
 
 @media screen and (max-width: 600px) {
     .inicio .emper {
-        width: 55%;
+        width: 75%;
         height: 65%;
     }
     
     .inicio .enamo {
-        width: 55%;
+        width: 75%;
         height: 65%;
     }
     .inicio.imagenesAElegir{
