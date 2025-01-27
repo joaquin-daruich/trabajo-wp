@@ -16,8 +16,8 @@ function App() {
 
 return (
 <>
-
 <Routes>
+    
     <Route path='/'element={<IniciarSesion></IniciarSesion>}/>
     <Route path='/Inicio' element={<Inicio></Inicio>}/>
     <Route path='/perfiles/:autor' element={<Mensajes></Mensajes>}/>
@@ -25,7 +25,9 @@ return (
     <Route path='/crearNuevaCarta' element={<NuevaCarta></NuevaCarta>}/>
     <Route path='/*' element={<Error404></Error404>} />
     <Route path='/NuevaPersona' element={<CrearNuevaPersonaParaHablar></CrearNuevaPersonaParaHablar>} />
+    
 </Routes>
+
 
  
 

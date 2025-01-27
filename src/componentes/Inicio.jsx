@@ -16,13 +16,12 @@ const {mostrarEnamorado} = useGlobalContext()
 
   return (
     
-    <>
+
     
     <div className='inicio'>
         
         <div className='h1sDeInicio'>
             <h1 className='elegir'>Con quien queres hablar? </h1>
-            <h1 className='elegir'>Elegí mas!</h1>
         </div>
         <div className='imagenesAElegir'>
             <div className={mostrarEmperador} >
@@ -41,7 +40,7 @@ const {mostrarEnamorado} = useGlobalContext()
         </div>    
 
     </div>
-    </>
+
   )
 }
 

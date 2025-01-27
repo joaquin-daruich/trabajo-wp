@@ -269,7 +269,7 @@ width: 50%;
     justify-content: center;
     align-items: start;
     background-image:url("../public/caballos.jpg");
-
+    height: 100vh;
 }
 
 
@@ -287,7 +287,8 @@ width: 50%;
 .inicio .h1sDeInicio{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .inicio .tarot{
@@ -314,211 +315,11 @@ width: 50%;
 }
 
 
-@media screen and (min-width: 500px) {
-    .Mensajes .uno{
-     right: 32vh;
-    }
-    .Mensajes .uno .hora-uno{
-        top: 3vh;
-    }
-    .Mensajes .enviar{
-        left: 25vh;
-    }
-    .inicio .quien{
-        top: 12vh;
-        left: 62vh;
-    }
-}
 
-    
-.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
-
-    left:  30vh;
-
-    
-}
-
-.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    left:   30.5vh;
-
-}
-.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
-
-    left: 9VH;
-    
-}  
-
-@media screen and (min-width: 870px) {
-    .Mensajes .uno{
-     right: 68vh;
-    }
-    .Mensajes .uno .hora-uno{
-        top: 4vh;
-        left: 31vh;
-    }
-    .Mensajes .enviar{
-        left: 35vh;
-    }
-    .inicio .quien{
-        top: 12vh;
-        left: 62vh;
-    }
-
-    
-.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
-
-    left:  67vh;
-
-    
-}
-
-.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    left:   67.5vh;
-
-}
-.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
-
-    left: 38VH;
-    
-}
-.Mensajes .enviar  .Enviar-Mensaje::placeholder  {
-    left: 30vh;
-} 
-.Perfil{
-    width: 98vw;
-    height: 12vh;
-}
- }
-
- @media screen and (min-width: 1270px) {
-    .Mensajes .uno{
-     right: 43vh;
-    }
-    .Mensajes .uno .hora-uno{
-        top: 4vh;
-        left: 23vh;
-    }
-    .Mensajes .enviar{
-        left: 15vh;
-    }
-    .inicio .quien{
-        top: 12vh;
-        left: 62vh;
-    }
-
-    
-.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
-
-    left:  43vh;
-
-    
-}
-
-.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    left:   43.5vh;
-
-}
-.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
-
-    left: 22VH;
-    
-}
-.Mensajes .enviar  .Enviar-Mensaje::placeholder  {
-    left: 30vh;
-} 
-.Perfil{
-    width: 98vw;
-}
- }
 
  
-@media screen and (min-width: 870px) {
-    .Mensajes .uno{
-     right: 68vh;
-    }
-    .Mensajes .uno .hora-uno{
-        top: 4vh;
-        left: 31vh;
-    }
-    .Mensajes .enviar{
-        left: 35vh;
-    }
-    .inicio .quien{
-        top: 12vh;
-        left: 62vh;
-    }
 
 
-    
-.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
-
-    left:  67vh;
-
-    
-}
-
-.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    left:   67.5vh;
-
-}
-.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
-
-    left: 38VH;
-    
-}
-.Mensajes .enviar  .Enviar-Mensaje::placeholder  {
-    left: 30vh;
-} 
-.Perfil{
-    width: 98vw;
-    height: 12vh;
-}
- }
-
- @media screen and (min-width: 1800px) {
-    .Mensajes .uno{
-     right: 74vh;
-    }
-    .Mensajes .uno .hora-uno{
-        top: 4vh;
-        left: 37vh;
-    }
-    .Mensajes .enviar{
-        left: 42vh;
-    }
-    .inicio .quien{
-        top: 12vh;
-        left: 62vh;
-    }
-
-    
-.Mensajes .mensajes-nuevos  .mensaje-nuevo .hora-mensaje-nuevo {
-
-    left:  65vh;
-
-    
-}
-
-.Mensajes .mensajes-nuevos .mensaje-nuevo .estado-mensaje-nuevo {
-    left:   65.5vh;
-
-}
-.Mensajes .mensajes-nuevos .mensaje-nuevo .contenido-mensaje-nuevo {
-
-    left: 32VH;
-    
-}
-.Mensajes .enviar  .Enviar-Mensaje::placeholder  {
-    left: 30vh;
-} 
-.Perfil{
-    width: 98vw;
-}
- }
-
-.imagen-emperador{
-    top: 2vh;
-}
 
 
 
