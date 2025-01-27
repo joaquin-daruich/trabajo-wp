@@ -20,23 +20,25 @@ const {mostrarEnamorado} = useGlobalContext()
     
     <div className='inicio'>
         
-
-        <h1 className='quien'>Con quien queres hablar? </h1>
-        <div className={mostrarEmperador} >
-            <Link to={'/perfiles/' +  'El Emperador'}  >
-                <img className='emper' src={emperador.imagen} alt="" />
-            </Link>
-        </div>
-        <div className={mostrarEnamorado}>
-            <Link to={'/perfiles/' + 'El Enamorado'} >
-                <img className='enamo' src={enamorado.imagen} alt="" />
-            </Link>
-        </div>
-
+        <div className='h1sDeInicio'>
+            <h1 className='elegir'>Con quien queres hablar? </h1>
             <h1 className='elegir'>Elegí mas!</h1>
-            <Link to={'/crearNuevaCarta'}>
-            <img  className='tarot' src="/completo.jpg" alt="" />
-            </Link>
+        </div>
+        <div className='imagenesAElegir'>
+            <div className={mostrarEmperador} >
+                <Link to={'/perfiles/' +  'El Emperador'}  >
+                    <img className='emper' src={emperador.imagen} alt="" />
+                </Link>
+            </div>
+            <div className={mostrarEnamorado}>
+                <Link to={'/perfiles/' + 'El Enamorado'} >
+                    <img className='enamo' src={enamorado.imagen} alt="" />
+                </Link>
+            </div>
+                <Link to={'/crearNuevaCarta'}>
+                    <img  className='tarot' src="/completo.jpg" alt="" />
+                </Link>
+        </div>    
 
     </div>
     </>

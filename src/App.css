@@ -265,49 +265,53 @@ width: 50%;
 
 
 .inicio {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+    display: flexbox;
     justify-content: center;
     align-items: start;
     background-image:url("../public/caballos.jpg");
-    border: solid rgb(142, 3, 255) 20PX;
-    border-top: solid rgb(133, 3, 255) 20PX; 
-    border-radius:  13%;
+
 }
 
-.inicio .quien{
-    position: absolute;
-    width: 36vw;
-    height: 14vh;
-    font-size: 6vh;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    right: 6vh;
-    color: rgb(38, 0, 255);
-    background-image: url("../public/fondo-wp-blanco.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
+
 
 .inicio .emper {
-    width: 15vw;
-    height: 40vh;
-    position: relative;
-    right: 17vh;
-    top: 24vh;
+    width: 85%;
+    height: 95%;
 }
 
 .inicio .enamo {
-    width: 15vw;
-
-    position: relative;
-    left: 1vh;
-    top: 24vh;
-    height: 40vh;
+    width: 85%;
+    height: 95%;
 }
 
+.inicio .h1sDeInicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inicio .tarot{
+    width: 85%;
+    height: 95%;
+}
+
+.inicio .h1sDeInicio .elegir{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: rgb(38, 0, 255);
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    font-size: 22px;
+    background-image: url("../public/fondo-wp-blanco.jpg");
+}
+
+.inicio .imagenesAElegir{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 
 @media screen and (min-width: 500px) {
@@ -555,27 +559,7 @@ width: 50%;
     right: 78vh;
 }
 
-.tarot{
-    width: 20vw;
-    position: absolute;
-    right: 6vw;
-    top: 20vw;
-}
 
-.elegir{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    color: rgb(38, 0, 255);
-    border-radius: 50%;
-    width: 22vw;
-    height: 12vh;
-    position: absolute;
-    font-size: 8vh;
-    right:  9vh;
-    top: 22vh;
-    background-image: url("../public/fondo-wp-blanco.jpg");
-}
 
 
 
