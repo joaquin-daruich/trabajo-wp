@@ -69,9 +69,7 @@ const posteoDePrueba = async (email, contraseña) => {
         email: email,
         password: contraseña,
       }),
-      mode: 'no-cors', 
     });
-    console.log('Fetch exitoso, pero no podrás acceder a la respuesta');
   } catch (error) {
     console.error('Error en el fetch:', error);
   }
