@@ -58,12 +58,22 @@ validateError('email' , ERRORS.email_LENGTH)
 validateError('password' , ERRORS.PASSWORD_LENGTH)
 }
 const navigate = useNavigate()
-const posteoDePrueba =  async () => {
-await fetch ('https://trabajo-wp-back-end.vercel.app/prueba' , {
-  method: 'POST',
-  body: 'hola'
-})
-}
+const posteoDePrueba = async () => {
+  try {
+    const response = await fetch('https://trabajo-wp-back-end.vercel.app/prueba', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', 
+      },
+      body: JSON.stringify({ mensaje: 'hola' })  
+    });
+
+    const data = await response.json();
+    console.log('Respuesta del backend:', data);
+  } catch (error) {
+    console.error('Error en el fetch:', error);
+  }
+};
 const irParaElInicio = (e) => {
   e.preventDefault()
   valideemailLength(formularioDeLogeo.password) &&
