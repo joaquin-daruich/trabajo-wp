@@ -58,14 +58,17 @@ validateError('email' , ERRORS.email_LENGTH)
 validateError('password' , ERRORS.PASSWORD_LENGTH)
 }
 const navigate = useNavigate()
-const posteoDePrueba = async (valores) => {
+const posteoDePrueba = async (email , contraseña) => {
   try {
     const response = await fetch('https://trabajo-wp-back-end.vercel.app/prueba', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', 
       },
-      body: JSON.stringify(valores)  
+      body: {
+        email: email,
+        contraseña: contraseña
+      } 
     });
 
     const data = await response.json();
@@ -79,12 +82,16 @@ const irParaElInicio = (e) => {
   valideemailLength(formularioDeLogeo.password) &&
 valideemailLength(formularioDeLogeo.email) &&
 setRegistrado(true)
-posteoDePrueba(e.target)
+
+  const registroHTML = e.target
+  const valoresDelRegistro = new FormData(registroHTML)
+  posteoDePrueba(valoresDelRegistro.get('email') , valoresDelRegistro.get('password'))
+
     // navigate('/inicio')
 }
 const handleChangleValue = (e) => {
   const value = e.target.value
- 
+
   
   setformularioDeLogeo({...formularioDeLogeo, [e.target.name]: e.target.value })
 
@@ -116,7 +123,7 @@ const handleChangleValue = (e) => {
             </div>
             
 
-          <label  htmlFor="email"  >Contraseña:</label>
+          <label  htmlFor="password"  >Contraseña:</label>
               <input
                     onChange={handleChangleValue}
                     type="password" 
