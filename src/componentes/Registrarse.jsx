@@ -70,6 +70,7 @@ const posteoDePrueba = async (email, contraseña) => {
         password: contraseña,
       }),
     });
+    console.log(response)
     response.json()
   } catch (error) {
     console.error('Error en el fetch:', error);
