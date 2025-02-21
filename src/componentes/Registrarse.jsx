@@ -68,11 +68,10 @@ const posteoDePrueba = async (email, contraseña) => {
       body: JSON.stringify({
         email: email,
         password: contraseña,
-      }), // Asegúrate de que los datos sean un string JSON
+      }),
+      mode: 'no-cors', 
     });
-
-    const data = await response.json();
-    console.log('Respuesta del backend:', data);
+    console.log('Fetch exitoso, pero no podrás acceder a la respuesta');
   } catch (error) {
     console.error('Error en el fetch:', error);
   }
