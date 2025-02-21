@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { GlobalContextProvider, useGlobalContext } from './GlobalContext'
 
 
-const IniciarSesion = () => {
+const Registrarse = () => {
   const initialStateErrors = {
-    username: [],
+    email: [],
     password: []
   }
-const initialState = {username: '' , password: ''}
+const initialState = {email: '' , password: ''}
+const  [tieneArrobaOCom , setTieneArrobaOCom] = useState([])
+const [noTieneArrobaNiCom , setNoTieneArrobaNiCom] = useState(true)
 const [formularioDeLogeo , setformularioDeLogeo] = useState(initialState)
 const [errors , seterrors] = useState(initialStateErrors)
+const { registrado , setRegistrado } = useGlobalContext()
 
-const valideUsernameLength = (value) => {
+const valideemailLength = (value) => {
+  return value.length > 8 &&   tieneArrobaOCom.includes('@') &&
+  tieneArrobaOCom.includes('.')
+}
+const validePasswordLength = (value) => {
   return value.length > 8 
 }
 const ERRORS = {
-  USERNAME_LENGTH: {text:'tu nombre de usuario debe tener mas de 8 caracteres' , id: 1 , validate: valideUsernameLength} ,
-  PASSWORD_LENGTH: {text: 'tu contraseña debe tener mas de 8 caracteres' , id: 2 , validate: valideUsernameLength}
+  email_LENGTH: {text:'tu email debe tener mas de 8 caracteres , debe tener un "@" y un ".com"' , id: 1 , validate: valideemailLength} ,
+  PASSWORD_LENGTH: {text: 'tu contraseña debe tener mas de 8 caracteres' , id: 2 , validate: validePasswordLength}
 }
 
 const findError = (from, id_error) => {
@@ -30,8 +38,8 @@ const validateError = (from , errorToValidate ) => {
  // si se dejo de cumplir el error 
     if (errorToValidate.validate(formularioDeLogeo[from])){
        // elimino el erorr porque se dejo de cumplir
-      const newUsernameErrors = errors[from].filter(error => error.id != errorToValidate.id)
-    seterrors({...errors ,[from] : newUsernameErrors})
+      const newemailErrors = errors[from].filter(error => error.id != errorToValidate.id)
+    seterrors({...errors ,[from] : newemailErrors})
   }
 
 }
@@ -46,42 +54,59 @@ else{
 }
 
 const handleBlurInput = () => {
-validateError('username' , ERRORS.USERNAME_LENGTH)
+validateError('email' , ERRORS.email_LENGTH)
 validateError('password' , ERRORS.PASSWORD_LENGTH)
 }
 const navigate = useNavigate()
+const posteoDePrueba =  async () => {
+await fetch ('https://trabajo-wp-back-end.vercel.app/prueba' , {
+  method: 'POST',
+  body: 'hola'
+})
+}
 const irParaElInicio = (e) => {
   e.preventDefault()
-  valideUsernameLength(formularioDeLogeo.password) &&
-valideUsernameLength(formularioDeLogeo.username) &&
-    navigate('/inicio')
+  valideemailLength(formularioDeLogeo.password) &&
+valideemailLength(formularioDeLogeo.email) &&
+setRegistrado(true)
+posteoDePrueba()
+    // navigate('/inicio')
 }
-
 const handleChangleValue = (e) => {
+  const value = e.target.value
+ 
+  
   setformularioDeLogeo({...formularioDeLogeo, [e.target.name]: e.target.value })
+
+  if (e.target.name === 'email') {
+    const letras = value.split('')
+    setTieneArrobaOCom(letras) 
+  }
+
+
   handleBlurInput()
 }
   return (
     <form onSubmit={irParaElInicio} >
       <div>
-        <h1 className='mensaje3'>Porfavor incia sesion para poder comunicarte</h1>
-        <label  htmlFor="username"  > </label>
+        <h1 className='mensaje3'>Porfavor Registrate para poder comunicarte</h1>
+        <label  htmlFor="email"  > </label>
             <input 
             onChange={handleChangleValue}   
-            id='username' 
-            name='username' 
+            id='email' 
+            name='email' 
             type="text" 
-            placeholder='Nombre de Usuario' 
-            value={formularioDeLogeo.username}
+            placeholder='Introduzca su email' 
+            value={formularioDeLogeo.email}
             />
             {
-              errors.username.length > 0 &&
-              errors.username.map((error ) => (<span key={error.id}>{error.text}</span>))
+              errors.email.length > 0 &&
+              errors.email.map((error ) => (<span key={error.id}>{error.text}</span>))
             }
             </div>
             
 
-          <label  htmlFor="username"  >Contraseña:</label>
+          <label  htmlFor="email"  >Contraseña:</label>
               <input
                     onChange={handleChangleValue}
                     type="password" 
@@ -98,4 +123,4 @@ const handleChangleValue = (e) => {
    </form>
   )
 }
-export  {IniciarSesion}
+export  {Registrarse}

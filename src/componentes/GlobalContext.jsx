@@ -5,6 +5,7 @@ const GlobalContext = createContext()
 export const GlobalContextProvider = ({children}) => {
 const [mostrarEmperador , setmostrarEmperador] = useState('')
 const [mostrarEnamorado , setmostrarEnamorado] = useState('')
+const [registrado , setRegistrado] = useState(false)
 const ocultarCarta = (numero) => {
     mostrarEmperador === 'ocultar' ?
     setmostrarEmperador('') :
@@ -23,7 +24,9 @@ const ocultarCarta = (numero) => {
                 {
                     mostrarEmperador:mostrarEmperador,
                     mostrarEnamorado:mostrarEnamorado,
-                    ocultarCarta:ocultarCarta 
+                    ocultarCarta:ocultarCarta ,
+                    registrado: registrado ,
+                    setRegistrado: setRegistrado ,
                 }
             }>
             {children}

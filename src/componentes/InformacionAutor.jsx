@@ -30,7 +30,7 @@ const InformacionAutor = () => {
 
 
       {autor === 'El Emperador' ?
-        <div>
+        <div className='informaciones'>
           <img className='imagenArcano2' src="/LeEmpereur.jpg" alt='' />
           <h1 className='informacion-autor'>El Emperador representa el dominio total de la materia y la estabilidad material</h1>
           <button onClick={eliminarHistorialParaEmperadorEnamo} className='eliminarHistorial'>Hace Click aca para eliminar el historial de Mensajes de El Emperador</button> </div> :

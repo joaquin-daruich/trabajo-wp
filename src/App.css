@@ -351,7 +351,7 @@ width: 50%;
 
 
 
-.iniciarSesion{
+.Registrarse{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -626,8 +626,8 @@ height: 60%;
 
 .noencontrar{
     background-image: url("/nosaber.jpg");
-    width: 100vw;
-    height: 180vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
