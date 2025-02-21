@@ -60,7 +60,7 @@ validateError('password' , ERRORS.PASSWORD_LENGTH)
 const navigate = useNavigate()
 const posteoDePrueba = async (email, contraseña) => {
   try {
-    const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
+     const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const posteoDePrueba = async (email, contraseña) => {
       }),
     });
     console.log(response)
-    response.json()
+    // response.json()
   } catch (error) {
     console.error('Error en el fetch:', error);
   }
