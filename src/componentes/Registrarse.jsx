@@ -63,9 +63,9 @@ const posteoDePrueba = async (email, contraseña) => {
     const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', // Correcto
+        'Content-Type': 'application/json', 
       },
-      body: JSON.stringify({ email, contraseña }) // Aquí se envían los datos correctamente como un objeto JSON
+      body: JSON.stringify({ email, contraseña }) 
     });
 
     const data = await response.json();
