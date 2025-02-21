@@ -80,7 +80,7 @@ const Registrarse = () => {
       }
   
       const data = await response.json();
-      console.log('Usuario registrado:', data);
+      console.log('Usuario registrado:', data + 'Rei I');
     }
   
         catch(error) {
