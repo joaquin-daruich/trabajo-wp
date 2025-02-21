@@ -60,8 +60,8 @@ const Registrarse = () => {
   const navigate = useNavigate()
   const posteoDePrueba = async (email, contraseña) => {
     try {
-      const response = await fetch('http://localhost:7000/registrarse', {
-        // const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
+      
+         const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const Registrarse = () => {
       })
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message);  // Lanza un error con el mensaje de la API
+        throw new Error(errorData.message); 
       }
   
       const data = await response.json();
@@ -86,6 +86,7 @@ const Registrarse = () => {
         catch(error) {
 
           console.error('Error en el fetch:', error);
+          console.error(error)
         }
       }
 
