@@ -66,8 +66,8 @@ const posteoDePrueba = async (email , contraseña) => {
         'Content-Type': 'application/json', 
       },
       body: {
-        email: email,
-        contraseña: contraseña
+        email: JSON.stringify(email),
+        contraseña: JSON.stringify(contraseña)
       } 
     });
 
