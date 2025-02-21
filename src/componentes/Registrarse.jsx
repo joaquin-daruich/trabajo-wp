@@ -63,9 +63,12 @@ const posteoDePrueba = async (email, contraseña) => {
     const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', 
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, contraseña }) 
+      body: JSON.stringify({
+        email: email,
+        password: contraseña,
+      }), // Asegúrate de que los datos sean un string JSON
     });
 
     const data = await response.json();
@@ -73,7 +76,7 @@ const posteoDePrueba = async (email, contraseña) => {
   } catch (error) {
     console.error('Error en el fetch:', error);
   }
-}
+};
 const irParaElInicio = (e) => {
   e.preventDefault()
   valideemailLength(formularioDeLogeo.password) &&
