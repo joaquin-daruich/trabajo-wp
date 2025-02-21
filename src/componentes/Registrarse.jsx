@@ -58,17 +58,14 @@ validateError('email' , ERRORS.email_LENGTH)
 validateError('password' , ERRORS.PASSWORD_LENGTH)
 }
 const navigate = useNavigate()
-const posteoDePrueba = async (email , contraseña) => {
+const posteoDePrueba = async (email, contraseña) => {
   try {
     const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', 
+        'Content-Type': 'application/json', // Correcto
       },
-      body: {
-        email: JSON.stringify(email),
-        contraseña: JSON.stringify(contraseña)
-      } 
+      body: JSON.stringify({ email, contraseña }) // Aquí se envían los datos correctamente como un objeto JSON
     });
 
     const data = await response.json();
@@ -76,7 +73,7 @@ const posteoDePrueba = async (email , contraseña) => {
   } catch (error) {
     console.error('Error en el fetch:', error);
   }
-};
+}
 const irParaElInicio = (e) => {
   e.preventDefault()
   valideemailLength(formularioDeLogeo.password) &&
