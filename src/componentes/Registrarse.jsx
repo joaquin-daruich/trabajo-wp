@@ -58,14 +58,14 @@ validateError('email' , ERRORS.email_LENGTH)
 validateError('password' , ERRORS.PASSWORD_LENGTH)
 }
 const navigate = useNavigate()
-const posteoDePrueba = async () => {
+const posteoDePrueba = async (valores) => {
   try {
     const response = await fetch('https://trabajo-wp-back-end.vercel.app/prueba', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', 
       },
-      body: JSON.stringify({ mensaje: 'hola' })  
+      body: JSON.stringify(valores)  
     });
 
     const data = await response.json();
@@ -79,7 +79,7 @@ const irParaElInicio = (e) => {
   valideemailLength(formularioDeLogeo.password) &&
 valideemailLength(formularioDeLogeo.email) &&
 setRegistrado(true)
-posteoDePrueba()
+posteoDePrueba(e.target)
     // navigate('/inicio')
 }
 const handleChangleValue = (e) => {
