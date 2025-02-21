@@ -60,35 +60,30 @@ const Registrarse = () => {
   const navigate = useNavigate()
   const posteoDePrueba = async (email, contraseña) => {
     try {
-      
-         const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-          password: contraseña,
-          
+        const response = await fetch('http://localhost:7000/registrarse', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: email,
+                password: contraseña,
+            })
+        });
+   
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(`Error: ${errorData.message || 'Algo salió mal'} `);
         }
-      ),
-      
-      })
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message); 
-      }
-  
-      const data = await response.json();
-      console.log('Usuario registrado:', data + 'Rei I');
+   
+        const data = await response.json();
+        console.log('Usuario registrado:', data);
+    } catch (error) {
+        console.error('Error en el fetch:', error);
+        alert('Hubo un problema con el registro. Intenta nuevamente.');
     }
-  
-        catch(error) {
-
-          console.error('Error en el fetch:', error);
-          console.error(error)
-        }
-      }
+   };
+   
 
 const irParaElInicio = (e) => {
         e.preventDefault()
