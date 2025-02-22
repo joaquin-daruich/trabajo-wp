@@ -9,18 +9,21 @@ import Logearse from './Logearse'
 const RutaProtegida = () => {
 const logeado = localStorage.getItem('estas logeado?')
 
+console.log(logeado === false)
+
+
     
   return (
     <>
-    {    logeado?
-    <Outlet/>
+    {    logeado === 'false' ?
+        <>
+        <div>Primero vas a tener que Logearte para poder hablar con alguien!</div>
+        <Link to={'/login'}><Logearse></Logearse></Link>
+        </>
+    
     :
-    <>
-    <div>Primero vas a tener que Logearte para poder hablar con alguien!</div>
-    <Link to={'/login'}><Logearse></Logearse></Link>
-    </>
+<Outlet/>
     }
-
     </>
   )
 }

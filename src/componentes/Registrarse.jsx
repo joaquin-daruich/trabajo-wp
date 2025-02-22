@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { GlobalContextProvider, useGlobalContext } from './GlobalContext'
 
 
 const Registrarse = () => {
@@ -10,10 +9,9 @@ const Registrarse = () => {
   }
   const initialState = { email: '', password: '' }
   const [tieneArrobaOCom, setTieneArrobaOCom] = useState([])
-  const [noTieneArrobaNiCom, setNoTieneArrobaNiCom] = useState(true)
   const [formularioDeLogeo, setformularioDeLogeo] = useState(initialState)
   const [errors, seterrors] = useState(initialStateErrors)
-  const { registrado, setRegistrado } = useGlobalContext()
+
 
   const valideemailLength = (value) => {
     return value.length > 8 && tieneArrobaOCom.includes('@') &&

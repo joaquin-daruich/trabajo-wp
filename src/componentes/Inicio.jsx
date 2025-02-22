@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { MensajesLista } from '../MensajesLista';
 import { useGlobalContext } from './GlobalContext';
 
@@ -12,14 +12,24 @@ const enamorado = MensajesLista.find((imagen ) => imagen.autor === 'El Enamorado
 const emperador = MensajesLista.find((imagen ) => imagen.autor === 'El Emperador')
 const {mostrarEmperador} = useGlobalContext()
 const {mostrarEnamorado} = useGlobalContext()
-
+const navigate = useNavigate()
+const cerrarSesion = () => {
+    localStorage.setItem('estas logeado?' , false)
+}
 
   return (
     
 
     
     <div className='inicio'>
-        
+            <Link onClick={cerrarSesion} to={'/login'}>
+            <div >
+                Cerrar sesion!
+            </div>
+            </Link>
+
+            
+            
         <div className='h1sDeInicio'>
             <h1 className='elegir'>Con quien queres hablar? </h1>
         </div>
