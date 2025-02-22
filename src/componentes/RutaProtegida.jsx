@@ -15,7 +15,7 @@ console.log(logeado === false)
     
   return (
     <>
-    {    logeado === 'false' ?
+    {    logeado === 'false' || !logeado ?
         <>
         <div>Primero vas a tener que Logearte para poder hablar con alguien!</div>
         <Link to={'/login'}><Logearse></Logearse></Link>
