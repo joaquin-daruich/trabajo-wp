@@ -58,7 +58,7 @@ const Registrarse = () => {
     validateError('password', ERRORS.PASSWORD_LENGTH)
   }
   const navigate = useNavigate()
-  const posteoDePrueba = async (email, contraseña) => {
+  const registrar = async (email, contraseña) => {
     try {
       const response = await fetch('https://trabajo-wp-back-end.vercel.app/registrarse', {
             method: 'POST',
@@ -78,6 +78,7 @@ const Registrarse = () => {
    
         const data = await response.json();
         console.log('Usuario registrado:', data);
+        navigate('/login')
     } catch (error) {
         console.error('Error en el fetch:', error);
         alert('Hubo un problema con el registro. Intenta nuevamente.');
@@ -93,9 +94,7 @@ const irParaElInicio = (e) => {
 
         const registroHTML = e.target
         const valoresDelRegistro = new FormData(registroHTML)
-        posteoDePrueba(valoresDelRegistro.get('email'), valoresDelRegistro.get('password'))
-
-        // navigate('/inicio')
+        registrar(valoresDelRegistro.get('email'), valoresDelRegistro.get('password'))
       }
       const handleChangleValue = (e) => {
         const value = e.target.value
@@ -112,6 +111,7 @@ const irParaElInicio = (e) => {
         handleBlurInput()
       }
       return (
+        <>
         <form onSubmit={irParaElInicio} >
           <div>
             <h1 className='mensaje3'>Porfavor Registrate para poder comunicarte</h1>
@@ -146,6 +146,11 @@ const irParaElInicio = (e) => {
           }
           <button type='submit'>enviar</button>
         </form>
+        <div>
+          <h1>Ya estas registrado ?</h1>
+          <Link to={'/logearse'} >Logeate!</Link>
+        </div>
+        </>
       )
     }
 export { Registrarse }

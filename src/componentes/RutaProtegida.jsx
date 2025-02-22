@@ -16,7 +16,7 @@ const RutaProtegida = () => {
     <Outlet/>
     :
     <>
-    <div>Primero vas a tener que registrarte para poder hablar con alguien!</div>
+    <div>Primero vas a tener que Logearte para poder hablar con alguien!</div>
     <Link to={'/'}><Registrarse/></Link>
     </>
     }
