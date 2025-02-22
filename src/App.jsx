@@ -22,7 +22,7 @@ return (
 <>
 <Routes>
     
-<Route path='/'element={<Registrarse></Registrarse>}/>
+<Route path='/registrarse'element={<Registrarse></Registrarse>}/>
 <Route path='/login'element={<Logearse></Logearse>}/>
 <Route path='/olvidarContrasena'element={<OlvidarContrasena></OlvidarContrasena>}/>
 <Route path="/nuevaContrasena/:token"element={<NuevaContrasena/>}/>

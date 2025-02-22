@@ -23,6 +23,7 @@ const Logearse = () => {
        
             const data = await response.json();
             console.log('Usuario logeado:', data);
+            localStorage.setItem('estas logeado?' , 'si')
             navigate('/inicio')
         } catch (error) {
             console.error('Error en el fetch:', error);
@@ -31,7 +32,6 @@ const Logearse = () => {
        };
     const logear = (e) => {
         e.preventDefault()
-          setRegistrado(true)
         const registroHTML = e.target
         const valoresDelLogeo = new FormData(registroHTML)
         mandarLogeo(valoresDelLogeo.get('email'), valoresDelLogeo.get('password'))

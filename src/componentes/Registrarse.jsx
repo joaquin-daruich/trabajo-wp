@@ -89,8 +89,7 @@ const Registrarse = () => {
 const irParaElInicio = (e) => {
         e.preventDefault()
         valideemailLength(formularioDeLogeo.password) &&
-          valideemailLength(formularioDeLogeo.email) &&
-          setRegistrado(true)
+          valideemailLength(formularioDeLogeo.email) 
 
         const registroHTML = e.target
         const valoresDelRegistro = new FormData(registroHTML)
@@ -148,7 +147,7 @@ const irParaElInicio = (e) => {
         </form>
         <div>
           <h1>Ya estas registrado ?</h1>
-          <Link to={'/logearse'} >Logeate!</Link>
+          <Link to={'/login'} >Logeate!</Link>
         </div>
         </>
       )

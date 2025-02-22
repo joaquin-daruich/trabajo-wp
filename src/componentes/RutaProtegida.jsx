@@ -2,22 +2,22 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { Registrarse } from './Registrarse'
 import { useGlobalContext } from './GlobalContext'
+import Logearse from './Logearse'
 
 
 
 const RutaProtegida = () => {
-    const { registrado , setRegistrado } = useGlobalContext()
-
+const logeado = localStorage.getItem('estas logeado?')
 
     
   return (
     <>
-    {    registrado ?
+    {    logeado?
     <Outlet/>
     :
     <>
     <div>Primero vas a tener que Logearte para poder hablar con alguien!</div>
-    <Link to={'/'}><Registrarse/></Link>
+    <Link to={'/login'}><Logearse></Logearse></Link>
     </>
     }
 
