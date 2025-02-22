@@ -10,7 +10,6 @@ import Error404 from './componentes/Error404.jsx'
 import CrearNuevaPersonaParaHablar from './componentes/CrearNuevaPersonaParaHablar.jsx'
 import RutaProtegida from './componentes/RutaProtegida.jsx'
 import Logearse from './componentes/Logearse.jsx'
-import VerificarEmail from './componentes/VerificarEmail.jsx'
 import OlvidarContrasena from './componentes/OlvidarContrasena.jsx'
 import NuevaContrasena from './componentes/NuevaContrasena.jsx'
 
